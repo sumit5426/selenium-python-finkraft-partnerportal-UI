@@ -1,0 +1,1 @@
+[{"uid":"a65d5bead6b0aed9","name":"test_switch_workspace","time":{"start":1750320967770,"stop":1750320986208,"duration":18438},"status":"passed","severity":"normal"},{"uid":"3e13d7e6865ea439","name":"Login with valid credentials","time":{"start":1750320991745,"stop":1750320992240,"duration":495},"status":"failed","severity":"normal"}]

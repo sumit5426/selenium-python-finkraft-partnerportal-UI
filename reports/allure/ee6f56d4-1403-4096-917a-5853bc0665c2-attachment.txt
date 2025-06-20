@@ -1,0 +1,6 @@
+Switching workspace
+2025-06-20 15:53:37 | INFO     | login_page.py:login:23 - pages.login_page - Logging in with user: sumit@kgrp.in
+Logging in with email: sumit@kgrp.in
+Switching workspace from page class
+Yatra - Finkraft
+Reserve bank of india yatra

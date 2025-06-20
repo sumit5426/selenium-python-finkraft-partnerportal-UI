@@ -1,0 +1,21 @@
+default_env: QA
+default_client: YATRA
+default_workspace: Reserve bank of india yatra  # fallback workspace if none passed from CLI
+
+environments:
+  QA:
+    clients:
+      YATRA:
+        url: "https://myyatra.finkraft.ai/auth/signin"
+        username: "sumit@kgrp.in"
+        password: "HRzyUJ2i0"
+        workspaces:
+          - Reserve bank of india yatra
+          - workspace2
+      client2:
+        url: "https://client2.qa.example.com"
+        username: "user2"
+        password: "pass2"
+        workspaces:
+          - workspaceA
+          - workspaceB

@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","677","test_login_valid_user","src.tests","Tue May 20 23:03:19 IST 2025","failed","Tue May 20 23:03:19 IST 2025","TestLogin","test_login","",""
+"","778","test_login_workspace","src.tests","Sun May 18 16:46:25 IST 2025","passed","Sun May 18 16:46:26 IST 2025","","test_login","",""
+"","19310","test_switch_workspace","src.tests","Tue May 20 23:02:53 IST 2025","passed","Tue May 20 23:03:12 IST 2025","TestDashBoard","test_dashboard","",""
+"","5885","test_login_invalid_user","src.tests","Sun May 18 22:18:48 IST 2025","broken","Sun May 18 22:18:54 IST 2025","TestLogin","test_login","",""

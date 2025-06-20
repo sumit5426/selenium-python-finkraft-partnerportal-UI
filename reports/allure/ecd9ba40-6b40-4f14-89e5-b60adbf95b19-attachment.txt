@@ -1,0 +1,2 @@
+[32mINFO    [0m tests.test_login:test_login.py:13 Testing login with valid credentials
+[32mINFO    [0m pages.login_page:login_page.py:23 Logging in with user: sumit@kgrp.in
