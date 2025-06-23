@@ -1,1 +1,0 @@
-[32mINFO    [0m pages.login_page:login_page.py:23 Logging in with user: sumit@kgrp.in

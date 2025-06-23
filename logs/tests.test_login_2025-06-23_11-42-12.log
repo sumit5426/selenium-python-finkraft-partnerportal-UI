@@ -1,0 +1,5 @@
+2025-06-23 11:42:19 | INFO     | login_page.py:login:23 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-06-23 11:42:19 | INFO     | login_page.py:login:28 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-06-23 11:42:42 | INFO     | test_login.py:test_login_valid_user:13 - tests.test_login - Testing login with valid credentials
+2025-06-23 11:42:42 | INFO     | login_page.py:login:23 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-06-23 11:42:42 | INFO     | login_page.py:login:28 - pages.login_page - Logged in with user: sumit@kgrp.in

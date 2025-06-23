@@ -11,6 +11,8 @@ class DashBoardPage(BrowserUtility):
         super().__init__(driver)
 
     SWITCH_WORKSPACE_LOGO = (By.XPATH,"//div[contains(@class,'ant-dropdown-trigger')]")
+    WORKSPACE_NAME=(By.XPATH,"//p[contains(@class,'sc-Qotzb')][normalize-space()='Reserve bank of india yatra']")
+
 
 
     def switch_workspace(self,workspace_name):
@@ -18,3 +20,4 @@ class DashBoardPage(BrowserUtility):
         self.click(self.SWITCH_WORKSPACE_LOGO)
         WORKSPACE=(By.XPATH, f"//p[normalize-space()='{workspace_name}']")
         self.click_scroll(WORKSPACE)
+        return self.visible_text(self.WORKSPACE_NAME)

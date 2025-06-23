@@ -1,4 +1,5 @@
-from selenium.common import ElementClickInterceptedException, ElementNotInteractableException
+from selenium.common import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, \
+    TimeoutException, NoAlertPresentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,3 +29,37 @@ class BrowserUtility:
         except (ElementClickInterceptedException, ElementNotInteractableException):
             print("Element not clickable directly. Scrolling into view and retrying...")
             self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", locator)
+
+    def visible_text(self, locator):
+        """Check if an error message is visible within the given timeout."""
+        try:
+            element=self.wait.until(
+                EC.visibility_of_element_located(locator)
+            )
+            return element.text
+        except TimeoutException:
+            return None
+
+    def get_alert_text_if_present(self):
+        """
+        Checks if a browser alert is present.
+        Returns:
+            The alert text if alert is present, else None.
+        """
+        try:
+            self.wait.until(EC.alert_is_present())
+            print("Alert present.")
+            alert = self.driver.switch_to.alert
+            return alert.text
+        except TimeoutException:
+            return None
+        except NoAlertPresentException:
+            return None
+
+    def is_signin_page_url(self):
+        current_url = self.driver.current_url
+        is_correct_url = ".finkraft.ai/auth/signin" in current_url
+        return is_correct_url
+
+
+

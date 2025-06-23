@@ -1,0 +1,9 @@
+2025-06-23 17:39:15 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-06-23 17:39:16 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-06-23 17:39:31 | INFO     | test_login.py:test_login_valid_user:16 - tests.test_login - Testing login with valid credentials
+2025-06-23 17:39:31 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-06-23 17:39:32 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-06-23 17:39:37 | INFO     | test_login.py:test_login_empty_username:24 - tests.test_login - Testing login with empty fields
+2025-06-23 17:39:37 | INFO     | login_page.py:login_empty_username:47 - pages.login_page - Logging in with user: 
+2025-06-23 17:39:43 | INFO     | login_page.py:login_invalid_details:53 - pages.login_page - Logging in with user: abc@gmail.com
+2025-06-23 17:39:49 | INFO     | test_login.py:test_login_logout:40 - tests.test_login - Testing login and logout

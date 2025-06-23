@@ -1,0 +1,3 @@
+2025-06-23 13:47:41 | INFO     | test_login.py:test_login_valid_user:14 - tests.test_login - Testing login with valid credentials
+2025-06-23 13:47:41 | INFO     | login_page.py:login:25 - pages.login_page - Attempting login with user: sumit@kgrp.in
+2025-06-23 13:48:02 | INFO     | login_page.py:login:46 - pages.login_page - Login successful for user: sumit@kgrp.in

@@ -1,5 +1,6 @@
 import datetime
-
+from dotenv import load_dotenv
+import re
 import pytest
 import yaml
 import os
@@ -23,12 +24,21 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def config(request):
-    config_path = Path(__file__).resolve().parent / "src" / "config" / "config.yaml"
-    with open(config_path, "r") as f:
-        # yaml to dict
-        conf = yaml.safe_load(f)
+    # Load environment variables from .env file (for local use)
+    load_dotenv()
 
-    # retrieve value from command line and configuration file
+    config_path = Path(__file__).resolve().parent / "src" / "config" / "config.yaml"
+
+    with open(config_path, "r") as f:
+        raw_yaml = f.read()
+
+    # Replace ${ENV_VAR} with actual values from environment (env or GitHub Actions)
+    raw_yaml = re.sub(r"\$\{([^}]+)\}", lambda m: os.getenv(m.group(1), ""), raw_yaml)
+
+    # Parse final YAML into dict
+    conf = yaml.safe_load(raw_yaml)
+
+    # Get CLI or fallback values
     env = request.config.getoption("--env") or conf["default_env"]
     client = request.config.getoption("--client") or conf["default_client"]
     workspace = request.config.getoption("--workspace")
@@ -36,19 +46,14 @@ def config(request):
     browser = request.config.getoption("--browser")
     execution = request.config.getoption("--execution")
 
-    # Retrieving userid, password and url of particular client
     client_data = conf["environments"][env]["clients"][client]
 
     if not workspace:
         workspaces = client_data.get("workspaces", [])
-        if workspaces:
-            workspace = workspaces[0]
-        else:
-            workspace = conf.get("default_workspace")
-            if not workspace:
-                raise Exception(f"No workspace defined for client: {client} in env: {env}")
+        workspace = workspaces[0] if workspaces else conf.get("default_workspace")
+        if not workspace:
+            raise Exception(f"No workspace defined for client: {client} in env: {env}")
 
-    # return statement is used so that we can get access these details across framework
     return {
         "env": env,
         "client": client,

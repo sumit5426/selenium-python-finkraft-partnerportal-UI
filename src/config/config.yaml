@@ -7,8 +7,8 @@ environments:
     clients:
       YATRA:
         url: "https://myyatra.finkraft.ai/auth/signin"
-        username: "sumit@kgrp.in"
-        password: "HRzyUJ2i0"
+        username: ${QA_YATRA_USERNAME}
+        password: ${QA_YATRA_PASSWORD}
         workspaces:
           - Reserve bank of india yatra
           - workspace2
