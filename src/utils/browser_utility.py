@@ -30,10 +30,21 @@ class BrowserUtility:
             print("Element not clickable directly. Scrolling into view and retrying...")
             self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", locator)
 
+    def visible_element(self, locator, timeout=None):
+        """Wait until the element is visible. Return the element if found, else None."""
+        try:
+            # Use default self.wait or override with custom timeout
+            print(locator)
+            wait = self.wait if timeout is None else WebDriverWait(self.driver, timeout)
+            return wait.until(EC.visibility_of_element_located(locator))
+        except TimeoutException:
+            print(f"[visible_element] Element with locator {locator} not visible after {timeout or 10} seconds.")
+            return None
+
     def visible_text(self, locator):
         """Check if an error message is visible within the given timeout."""
         try:
-            element=self.wait.until(
+            element = self.wait.until(
                 EC.visibility_of_element_located(locator)
             )
             return element.text

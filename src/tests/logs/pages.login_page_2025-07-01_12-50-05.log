@@ -1,0 +1,5 @@
+2025-07-01 12:50:13 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-01 12:50:14 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-07-01 12:50:25 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'piechart' is visible: True
+2025-07-01 12:50:25 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'tables' is visible: True
+2025-07-01 12:50:56 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'logo' is visible: False

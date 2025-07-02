@@ -1,0 +1,4 @@
+2025-07-02 16:34:34 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-02 16:34:34 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+('css selector', '.module-content')
+[visible_element] Element with locator ('css selector', '.module-content') not visible after 10 seconds.

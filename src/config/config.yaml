@@ -12,6 +12,9 @@ environments:
         workspaces:
           - Reserve bank of india yatra
           - workspace2
+        expected_top_modules:
+          - Dashboard - Airline
+          - Dashboard - Hotel
       client2:
         url: "https://client2.qa.example.com"
         username: "user2"

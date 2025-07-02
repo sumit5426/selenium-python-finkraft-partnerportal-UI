@@ -1,0 +1,9 @@
+2025-07-01 12:45:03 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-01 12:45:04 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+('css selector', '.piegroup')
+2025-07-01 12:45:15 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'piechart' is visible: True
+('css selector', '.scrollFreeze')
+2025-07-01 12:45:15 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'tables' is visible: True
+('xpath', "//img[@alt='appIcon']")
+[visible_element] Element with locator ('xpath', "//img[@alt='appIcon']") not visible after 10 seconds.
+2025-07-01 12:45:25 | INFO     | dashboard_page.py:is_widget_visible:46 - pages.dashboard_page - Widget 'logo' is visible: False

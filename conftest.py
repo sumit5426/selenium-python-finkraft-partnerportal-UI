@@ -26,18 +26,13 @@ def pytest_addoption(parser):
 def config(request):
     # Load environment variables from .env file (for local use)
     load_dotenv()
-
     config_path = Path(__file__).resolve().parent / "src" / "config" / "config.yaml"
-
     with open(config_path, "r") as f:
         raw_yaml = f.read()
-
     # Replace ${ENV_VAR} with actual values from environment (env or GitHub Actions)
     raw_yaml = re.sub(r"\$\{([^}]+)\}", lambda m: os.getenv(m.group(1), ""), raw_yaml)
-
     # Parse final YAML into dict
     conf = yaml.safe_load(raw_yaml)
-
     # Get CLI or fallback values
     env = request.config.getoption("--env") or conf["default_env"]
     client = request.config.getoption("--client") or conf["default_client"]
@@ -45,9 +40,7 @@ def config(request):
     headless = request.config.getoption("--headless").lower() in ("true", "1", "yes")
     browser = request.config.getoption("--browser")
     execution = request.config.getoption("--execution")
-
     client_data = conf["environments"][env]["clients"][client]
-
     if not workspace:
         workspaces = client_data.get("workspaces", [])
         workspace = workspaces[0] if workspaces else conf.get("default_workspace")
@@ -63,7 +56,8 @@ def config(request):
         "password": client_data["password"],
         "browser": browser,
         "headless": headless,
-        "execution": execution
+        "execution": execution,
+        "expected_top_modules": client_data.get("expected_top_modules", []),
     }
 
 

@@ -1,0 +1,3 @@
+2025-07-01 10:46:44 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-01 10:46:45 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+Exception while checking visibility of widget 'piechart': 'NoneType' object has no attribute 'is_displayed'

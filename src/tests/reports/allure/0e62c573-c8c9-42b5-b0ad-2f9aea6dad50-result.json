@@ -1,0 +1,1 @@
+{"name": "Redirect to login if not authenticated", "status": "skipped", "start": 1751441668835, "stop": 1751441668835, "uuid": "4cff50ac-3324-4eff-9a78-7b8ace06833c", "testCaseId": "ba3d3371d4005610776f285a8ebe7cf1", "fullName": "src.tests.test_dashboard.TestDashBoard#test_dashboard_redirects_to_login_when_not_authenticated"}

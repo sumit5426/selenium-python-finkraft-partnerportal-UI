@@ -1,0 +1,1 @@
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:138 The chromedriver version (137.0.7151.68) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (138.0.7204.49); currently, chromedriver 138.0.7204.49 is recommended for chrome 138.*, so it is advised to delete the driver in PATH and retry

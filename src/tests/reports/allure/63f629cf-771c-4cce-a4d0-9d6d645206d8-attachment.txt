@@ -1,0 +1,22 @@
+2025-07-01 15:14:55 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-01 15:14:55 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-07-01 15:15:05 | ERROR    | dashboard_page.py:is_widget_visible:67 - pages.dashboard_page - Exception for widget 'piechart': Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.49); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010545e654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x00000001054568c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104faa714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104ff17c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000105032de8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x0000000104fe59c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x0000000105422278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x000000010542550c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x0000000105403a64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x0000000105425d94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001053f4d58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x0000000105445d60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x0000000105445eec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x0000000105456514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x000000018ec0df94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000018ec08d34 thread_start + 8
+
