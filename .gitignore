@@ -1,2 +1,5 @@
 # created by virtualenv automatically
 .venv/bin
+src/tests/logs/
+logs
+src/tests/reports/screenshots/
