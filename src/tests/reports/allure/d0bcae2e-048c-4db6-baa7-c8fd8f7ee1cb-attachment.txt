@@ -1,0 +1,105 @@
+2025-07-08 12:57:37 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 12:57:37 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdoxwns_have_values]
+Found 8 dropdowns
+dropdown is clicked
+Dropdown 1 has 4 options
+⚠️ Could not check selection status: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104954ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010494cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010449e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001044e5544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x00000001044dade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104526934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x00000001044d9834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104917fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010491b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x00000001048f9a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010491bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x00000001048eaa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010493b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010493bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010494c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+⚠️ Could not check selection status: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104954ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010494cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010449e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001044e5544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x00000001044dade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104526934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x00000001044d9834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104917fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010491b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x00000001048f9a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010491bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x00000001048eaa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010493b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010493bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010494c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+⚠️ Could not check selection status: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104954ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010494cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010449e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001044e5544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x00000001044dade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104526934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x00000001044d9834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104917fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010491b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x00000001048f9a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010491bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x00000001048eaa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010493b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010493bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010494c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+⚠️ Could not check selection status: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000104954ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010494cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010449e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001044a40a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x00000001044a63e4 cxxbridge1$string$len + 123408
+5   chromedriver                        0x00000001044a6460 cxxbridge1$string$len + 123532
+6   chromedriver                        0x00000001044a648c cxxbridge1$string$len + 123576
+7   chromedriver                        0x00000001044e5114 cxxbridge1$string$len + 380736
+8   chromedriver                        0x00000001044dade4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x0000000104526934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x00000001044d9834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x0000000104917fc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x000000010491b22c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x00000001048f9a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x000000010491bae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x00000001048eaa98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x000000010493b9d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x000000010493bb64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x000000010494c9e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 1: Message: 
+
+dropdown is clicked
+Error processing dropdown 2: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Error processing dropdown 3: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065bb970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 4: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065d71c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 5: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065d76a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 6: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065e8070>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 7: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065e89d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 8: HTTPConnectionPool(host='localhost', port=51019): Max retries exceeded with url: /session/2b10844dcdec086387ee04429447b297/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106403700>: Failed to establish a new connection: [Errno 61] Connection refused'))

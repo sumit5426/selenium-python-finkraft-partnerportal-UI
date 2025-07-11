@@ -1,0 +1,48 @@
+2025-07-09 16:47:32 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 16:47:33 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 7 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+Clicked second option (index 1) in dropdown 1
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 1: 7,565
+[✅] Value changed as expected for dropdown 1
+Dropdown 2 clicked
+Dropdown 2 has 3 options
+Clicked second option (index 1) in dropdown 2
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 2: 325
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 28 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 315
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 3 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 23
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 3 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]')
+OK button is disabled after selecting second option, will try third option
+Clicked third option (index 2) in dropdown 5 (from exception handler or disabled OK)
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting third option (confirmed enabled)
+After Value for dropdown 5: 73
+[✅] Value changed as expected for dropdown 5
+Dropdown 6 clicked
+Dropdown 6 has 2 options
+[ℹ️] Skipping dropdown 6 (only one option)
+Dropdown 7 clicked
+Dropdown 7 has 2 options
+[ℹ️] Skipping dropdown 7 (only one option)

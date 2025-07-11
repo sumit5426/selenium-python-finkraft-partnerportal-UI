@@ -1,0 +1,33 @@
+2025-07-10 16:22:04 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-10 16:22:10 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+[Step 1] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 2] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 3] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 4] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 5] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 6] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 7] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 8] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 9] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 10] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 11] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 12] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 13] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 14] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 15] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 16] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 17] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 18] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 19] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 20] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 21] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 22] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 23] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 24] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 25] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 26] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 27] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 28] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 29] scrollTop: 0, scrollHeight: 0, atBottom: False
+[Step 30] scrollTop: 0, scrollHeight: 0, atBottom: False

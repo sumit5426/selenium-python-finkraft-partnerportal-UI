@@ -1,0 +1,188 @@
+2025-07-09 12:44:38 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 12:44:38 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+[❌] Error processing dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+[❌] Error processing dropdown 2: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 3 clicked
+Dropdown 3 has 35 options
+[❌] Error processing dropdown 3: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+[❌] Error processing dropdown 4: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+[❌] Error processing dropdown 5: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+[❌] Error processing dropdown 6: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 7 clicked
+Dropdown 7 has 3 options
+[❌] Error processing dropdown 7: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+[❌] Error processing dropdown 8: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001046f4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001046ecdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x000000010423e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104285544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010427ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x00000001042c6934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104279834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x00000001046b7fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x00000001046bb22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104699a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x00000001046bbae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010468aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001046db9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001046dbb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001046ec9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

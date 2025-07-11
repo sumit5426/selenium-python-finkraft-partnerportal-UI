@@ -1,0 +1,3 @@
+2025-07-10 15:39:38 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-10 15:39:44 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in

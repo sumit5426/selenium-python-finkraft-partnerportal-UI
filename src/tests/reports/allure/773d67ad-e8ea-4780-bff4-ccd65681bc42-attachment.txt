@@ -1,0 +1,24 @@
+2025-07-11 17:39:02 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+[visible_element] Element with locator ('xpath', '(//span[@class="ant-avatar-string"])[1]') not visible after 10 seconds.
+2025-07-11 17:39:13 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+2025-07-11 17:39:23 | ERROR    | dashboard_page.py:is_widget_visible:80 - pages.dashboard_page - Exception for widget 'piechart': Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104c9cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000104c94dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001047e63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x000000010482d544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010486e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x0000000104821834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000104c5ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000104c6322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000104c41a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000104c63ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000104c32a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000104c839d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000104c83b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000104c949e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

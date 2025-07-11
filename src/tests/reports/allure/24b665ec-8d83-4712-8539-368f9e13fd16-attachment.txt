@@ -1,0 +1,504 @@
+2025-07-07 17:54:37 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-07 17:54:38 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+Found 8 dropdowns
+Dropdown 1 has 4 options
+Error processing option 1 in dropdown 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 2 in dropdown 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 3 in dropdown 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 4 in dropdown 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 has 17 options
+Error processing option 1 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 2 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 3 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 4 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 5 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 6 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 7 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 8 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 9 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 10 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 11 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 12 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 13 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 14 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 15 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 16 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 17 in dropdown 2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 3 has 35 options
+Error processing option 1 in dropdown 3: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 2 in dropdown 3: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dashboardFrame"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c5cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102c54dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001027a63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001027ed544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010282e934 cxxbridge1$string$len + 649056
+5   chromedriver                        0x00000001027e1834 cxxbridge1$string$len + 333408
+6   chromedriver                        0x0000000102c1ffc0 cxxbridge1$str$ptr + 2473268
+7   chromedriver                        0x0000000102c2322c cxxbridge1$str$ptr + 2486176
+8   chromedriver                        0x0000000102c01a08 cxxbridge1$str$ptr + 2348924
+9   chromedriver                        0x0000000102c23ae8 cxxbridge1$str$ptr + 2488412
+10  chromedriver                        0x0000000102bf2a98 cxxbridge1$str$ptr + 2287628
+11  chromedriver                        0x0000000102c439d8 cxxbridge1$str$ptr + 2619212
+12  chromedriver                        0x0000000102c43b64 cxxbridge1$str$ptr + 2619608
+13  chromedriver                        0x0000000102c549e8 cxxbridge1$str$ptr + 2688860
+14  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+15  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 3 in dropdown 3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Error processing option 4 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10362eb50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 5 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036136a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 6 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036439d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 7 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103655340>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 8 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103643940>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 9 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10366a040>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 10 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10366a970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 11 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10366a940>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 12 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10367b670>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 13 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10367bfa0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 14 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103690910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 15 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103690ca0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 16 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036a4610>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 17 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036a4f40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 18 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036b7310>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 19 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036b7c40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 20 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036cb5b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 21 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036cb9a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 22 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036df2e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 23 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036dfc10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 24 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036dffd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 25 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1036f4910>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 26 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104107280>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 27 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104107670>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 28 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104107f40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 29 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10411b8b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 30 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10411b8e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 31 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10412d5b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 32 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10412dee0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 33 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10411b850>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 34 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10413fa00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing option 35 in dropdown 3: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104156370>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 4: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10413f970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 5: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10416a0a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 6: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10416aa00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 7: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10416a9d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Error processing dropdown 8: HTTPConnectionPool(host='localhost', port=52133): Max retries exceeded with url: /session/b956b21d3615f71e54dbeeb3e99f0c30/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10417e760>: Failed to establish a new connection: [Errno 61] Connection refused'))

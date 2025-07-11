@@ -1,0 +1,26 @@
+2025-07-09 15:50:58 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 15:50:59 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 1 dropdowns
+[❌] Error processing dropdown 1: Message: element not interactable
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x0000000102b74ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000102b6cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001026be260 cxxbridge1$string$len + 90252
+3   chromedriver                        0x0000000102706568 cxxbridge1$string$len + 385940
+4   chromedriver                        0x00000001026fb358 cxxbridge1$string$len + 340356
+5   chromedriver                        0x00000001026fade4 cxxbridge1$string$len + 338960
+6   chromedriver                        0x0000000102746934 cxxbridge1$string$len + 649056
+7   chromedriver                        0x00000001026f9834 cxxbridge1$string$len + 333408
+8   chromedriver                        0x0000000102b37fc0 cxxbridge1$str$ptr + 2473268
+9   chromedriver                        0x0000000102b3b22c cxxbridge1$str$ptr + 2486176
+10  chromedriver                        0x0000000102b19a08 cxxbridge1$str$ptr + 2348924
+11  chromedriver                        0x0000000102b3bae8 cxxbridge1$str$ptr + 2488412
+12  chromedriver                        0x0000000102b0aa98 cxxbridge1$str$ptr + 2287628
+13  chromedriver                        0x0000000102b5b9d8 cxxbridge1$str$ptr + 2619212
+14  chromedriver                        0x0000000102b5bb64 cxxbridge1$str$ptr + 2619608
+15  chromedriver                        0x0000000102b6c9e8 cxxbridge1$str$ptr + 2688860
+16  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

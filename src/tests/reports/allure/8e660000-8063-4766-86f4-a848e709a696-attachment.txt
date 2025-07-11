@@ -1,0 +1,467 @@
+2025-07-08 10:56:56 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 10:56:56 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdoxwns_have_values]
+Found 8 dropdowns
+dropdown is clicked
+Dropdown 1 has 4 options
+Before Value for dropdown 1, option 1: 3,86,491
+Error processing option 1 in dropdown 1: Message: element click intercepted: Element <span class="zdropdownlist__text" tip="...">All</span> is not clickable at point (131, 131). Other element would receive the click: <div id="ZRSToolTipContent" elname="tipContent" class="ZRSWordWrap">...</div>
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104e470a8 cxxbridge1$string$len + 405204
+4   chromedriver                        0x0000000104e45614 cxxbridge1$string$len + 398400
+5   chromedriver                        0x0000000104e43428 cxxbridge1$string$len + 389716
+6   chromedriver                        0x0000000104e42824 cxxbridge1$string$len + 386640
+7   chromedriver                        0x0000000104e37358 cxxbridge1$string$len + 340356
+8   chromedriver                        0x0000000104e36de4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x0000000104e82934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 1, option 2: 3,86,491
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 1, option 2: 3,05,668
+[✅] Value changed as expected
+Before Value for dropdown 1, option 3: 3,05,668
+Error processing option 3 in dropdown 1: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104e000a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x0000000104e0266c cxxbridge1$string$len + 124056
+5   chromedriver                        0x0000000104e026ec cxxbridge1$string$len + 124184
+6   chromedriver                        0x0000000104e83648 cxxbridge1$string$len + 652404
+7   chromedriver                        0x0000000104e82934 cxxbridge1$string$len + 649056
+8   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+9   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+10  chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+11  chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+12  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+13  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+14  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+15  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+16  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+17  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 1, option 4: 3,05,668
+Error processing option 4 in dropdown 1: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104e000a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x0000000104e0266c cxxbridge1$string$len + 124056
+5   chromedriver                        0x0000000104e026ec cxxbridge1$string$len + 124184
+6   chromedriver                        0x0000000104e83648 cxxbridge1$string$len + 652404
+7   chromedriver                        0x0000000104e82934 cxxbridge1$string$len + 649056
+8   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+9   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+10  chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+11  chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+12  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+13  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+14  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+15  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+16  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+17  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+dropdown is clicked
+Dropdown 2 has 13 options
+Before Value for dropdown 2, option 1: 3,05,668
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing option 1 in dropdown 2: Message: 
+
+Before Value for dropdown 2, option 2: 3,05,668
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing option 2 in dropdown 2: 'NoneType' object has no attribute 'is_displayed'
+Error processing option 3 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 4 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 5 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 6 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 7 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 8 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 9 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 10 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 11 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 12 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing option 13 in dropdown 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 3: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 4: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 5: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 7: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Error processing dropdown 8: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001052b0ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001052a8dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104dfa3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104dd4144 chromedriver + 131396
+4   chromedriver                        0x0000000104e6960c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000104e82454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000104e35834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000105273fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010527722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000105255a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000105277ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000105246a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001052979d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000105297b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001052a89e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

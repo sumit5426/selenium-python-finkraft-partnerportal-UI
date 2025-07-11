@@ -1,0 +1,5 @@
+2025-07-10 12:51:05 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-10 12:51:12 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+[Attempt 1] .zdbDArea scrollTop: -1 / scrollHeight: -1
+✅ Scroll reached bottom or no more scroll.

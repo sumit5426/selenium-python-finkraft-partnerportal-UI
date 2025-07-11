@@ -1,0 +1,76 @@
+2025-07-09 16:20:12 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 16:20:13 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[verify_transaction_value_change_for_dropdowns]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+Clicked second option (index 1) in dropdown 1
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 1
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 1
+[❌] Error processing dropdown 1: Message: 
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+Clicked second option (index 1) in dropdown 2
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 2
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 2
+[❌] Error processing dropdown 2: Message: 
+
+Dropdown 3 clicked
+Dropdown 3 has 35 options
+Clicked second option (index 1) in dropdown 3
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 3
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 3
+[❌] Error processing dropdown 3: Message: 
+
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+Clicked second option (index 1) in dropdown 4
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 4
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 4
+[❌] Error processing dropdown 4: Message: 
+
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+Clicked second option (index 1) in dropdown 5
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 5
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 5
+[❌] Error processing dropdown 5: Message: 
+
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+Clicked second option (index 1) in dropdown 6
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 6
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 6
+[❌] Error processing dropdown 6: Message: 
+
+Dropdown 7 clicked
+Dropdown 7 has 3 options
+Clicked second option (index 1) in dropdown 7
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 7
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 7
+[❌] Error processing dropdown 7: Message: 
+
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+Clicked second option (index 1) in dropdown 8
+[⚠️] OK button issue after second option: 'DashBoardPage' object has no attribute 'ok_button'
+Clicked third option (index 2) in dropdown 8
+[❌] OK button failed even after third option: 'DashBoardPage' object has no attribute 'ok_button'
+[❌] OK button never clicked for dropdown 8
+[❌] Error processing dropdown 8: Message: 
+

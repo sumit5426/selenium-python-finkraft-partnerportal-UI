@@ -1,3 +1,5 @@
+import time
+
 from selenium.common import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, \
     TimeoutException, NoAlertPresentException
 from selenium.webdriver.common.by import By
@@ -33,8 +35,6 @@ class BrowserUtility:
     def visible_element(self, locator, timeout=None):
         """Wait until the element is visible. Return the element if found, else None."""
         try:
-            # Use default self.wait or override with custom timeout
-            print(locator)
             wait = self.wait if timeout is None else WebDriverWait(self.driver, timeout)
             return wait.until(EC.visibility_of_element_located(locator))
         except TimeoutException:
@@ -71,6 +71,53 @@ class BrowserUtility:
         current_url = self.driver.current_url
         is_correct_url = ".finkraft.ai/auth/signin" in current_url
         return is_correct_url
+
+    def scroll_into_view(self, element):
+        """Scroll the page to bring the element into view."""
+        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});", element)
+
+    def wait_for_all_elements(self, locator):
+        """Wait until all elements matching the locator are present in the DOM."""
+        try:
+            return self.wait.until(EC.presence_of_all_elements_located(locator))
+        except TimeoutException:
+            print(f"[wait_for_all_elements] Elements with locator {locator} not found within seconds.")
+            return []
+
+    def wait_for_value_change(self, old_value, locator, timeout=10):
+        self.wait.until(
+            lambda driver: self.visible_text(locator)
+        )
+
+    def scroll_to_bottom_of_container(self, selector, pause_time=2, max_attempts=10):
+
+        self.wait.until(
+            lambda d: d.execute_script(f"return document.querySelector('{selector}') !== null")
+        )
+
+        scroll_script = f"""
+            const el = document.querySelector('{selector}');
+            if (!el) return [-1, -1, -1, false];
+            el.scrollTop = el.scrollHeight;
+            const scrollTop = el.scrollTop;
+            const clientHeight = el.clientHeight;
+            const scrollHeight = el.scrollHeight;
+            const isBottom = (scrollTop + clientHeight) >= scrollHeight - 2;
+            return [scrollTop, clientHeight, scrollHeight, isBottom];
+        """
+
+        for attempt in range(max_attempts):
+            scrollTop, clientHeight, scrollHeight, isBottom = self.driver.execute_script(scroll_script)
+            print(
+                f"[Attempt {attempt + 1}] scrollTop: {scrollTop}, clientHeight: {clientHeight}, scrollHeight: {scrollHeight}, atBottom: {isBottom}")
+            if isBottom:
+                print(f"✅ Reached bottom of {selector}.")
+                return True
+            time.sleep(pause_time)
+
+        print(f"⚠️ Could not confirm scroll to bottom of {selector}.")
+        return False
+
 
 
 

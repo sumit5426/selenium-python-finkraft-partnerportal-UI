@@ -1,0 +1,95 @@
+2025-07-08 13:15:30 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 13:15:30 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdoxwns_have_values]
+Found 8 dropdowns
+dropdown is clicked
+Dropdown 1 has 4 options
+[ℹ️] No value selected in dropdown 1, selecting first.
+Error processing dropdown 1: Message: element click intercepted: Element <span class="zdropdownlist__text" tip="...">All</span> is not clickable at point (131, 131). Other element would receive the click: <div id="ZRSToolTipContent" elname="tipContent" class="ZRSWordWrap">...</div>
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001011d4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001011ccdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100d1e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100d6b0a8 cxxbridge1$string$len + 405204
+4   chromedriver                        0x0000000100d69614 cxxbridge1$string$len + 398400
+5   chromedriver                        0x0000000100d67428 cxxbridge1$string$len + 389716
+6   chromedriver                        0x0000000100d66824 cxxbridge1$string$len + 386640
+7   chromedriver                        0x0000000100d5b358 cxxbridge1$string$len + 340356
+8   chromedriver                        0x0000000100d5ade4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x0000000100da6934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x0000000100d59834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x0000000101197fc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x000000010119b22c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x0000000101179a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x000000010119bae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x000000010116aa98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x00000001011bb9d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x00000001011bbb64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x00000001011cc9e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+dropdown is clicked
+Dropdown 2 has 17 options
+[ℹ️] No value selected in dropdown 2, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 2: Message: 
+
+dropdown is clicked
+Dropdown 3 has 35 options
+[ℹ️] No value selected in dropdown 3, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 3: Message: 
+
+dropdown is clicked
+Dropdown 4 has 51 options
+[ℹ️] No value selected in dropdown 4, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 4: Message: 
+
+dropdown is clicked
+Dropdown 5 has 71 options
+[ℹ️] No value selected in dropdown 5, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 5: Message: 
+
+dropdown is clicked
+Dropdown 6 has 3 options
+[ℹ️] No value selected in dropdown 6, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 6: 4,06,347
+dropdown is clicked
+Dropdown 7 has 3 options
+[ℹ️] No value selected in dropdown 7, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 7: Message: 
+
+dropdown is clicked
+Dropdown 8 has 3 options
+[ℹ️] No value selected in dropdown 8, selecting first.
+Error processing dropdown 8: Message: element click intercepted: Element <span class="zdropdownlist__text" tip="...">All</span> is not clickable at point (1160, 131). Other element would receive the click: <div id="customAlertMessage" style="position: absolute; cursor: default; display: block; inset-inline-start: 885px; top: 121px; width: 1409px; z-index: 200000;">...</div>
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001011d4ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001011ccdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100d1e3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100d6b0a8 cxxbridge1$string$len + 405204
+4   chromedriver                        0x0000000100d69614 cxxbridge1$string$len + 398400
+5   chromedriver                        0x0000000100d67428 cxxbridge1$string$len + 389716
+6   chromedriver                        0x0000000100d66824 cxxbridge1$string$len + 386640
+7   chromedriver                        0x0000000100d5b358 cxxbridge1$string$len + 340356
+8   chromedriver                        0x0000000100d5ade4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x0000000100da6934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x0000000100d59834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x0000000101197fc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x000000010119b22c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x0000000101179a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x000000010119bae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x000000010116aa98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x00000001011bb9d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x00000001011bbb64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x00000001011cc9e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

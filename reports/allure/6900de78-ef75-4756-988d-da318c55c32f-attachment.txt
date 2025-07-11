@@ -1,0 +1,6 @@
+2025-07-03 11:29:26 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-03 11:29:26 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+('css selector', '#setViewTitle')
+[switch_to_default] Switched back to main content.
+('css selector', '#setViewTitle')
+[switch_to_default] Switched back to main content.

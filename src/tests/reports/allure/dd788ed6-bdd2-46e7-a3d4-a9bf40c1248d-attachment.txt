@@ -1,0 +1,141 @@
+2025-07-08 14:53:28 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 14:53:29 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 is clicked
+Dropdown 1 has 4 options
+Before Value for dropdown 1, option 1: 3,86,491
+❌ Error processing option 1 in dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104884ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010487cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001043ce3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104415544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010440ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104456934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104409834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104847fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010484b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104829a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010484bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010481aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010486b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010486bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010487c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 1, option 2: 3,86,491
+❌ Error processing option 2 in dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104884ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010487cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001043ce3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104415544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010440ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104456934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104409834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104847fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010484b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104829a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010484bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010481aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010486b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010486bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010487c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 1, option 3: 3,86,491
+❌ Error processing option 3 in dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104884ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010487cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001043ce3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104415544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010440ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104456934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104409834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104847fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010484b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104829a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010484bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010481aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010486b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010486bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010487c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 1, option 4: 3,86,491
+❌ Error processing option 4 in dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104884ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010487cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001043ce3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104415544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010440ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104456934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104409834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104847fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010484b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104829a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010484bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010481aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010486b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010486bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010487c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 is clicked
+Dropdown 2 has 17 options
+Before Value for dropdown 2, option 1: 3,86,491
+❌ Error processing option 1 in dropdown 2: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@type="checkbox"]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104884ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010487cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001043ce3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000104415544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x000000010440ade4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000104456934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000104409834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000104847fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010484b22c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000104829a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x000000010484bae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x000000010481aa98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x000000010486b9d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x000000010486bb64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x000000010487c9e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Before Value for dropdown 2, option 2: 3,86,491
+❌ Error processing option 2 in dropdown 2: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+❌ Error processing option 3 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10742a430>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 4 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074076a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 5 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10743b2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 6 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10743bbe0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 7 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10743bb80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 8 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074508e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 9 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107463250>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 10 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107463b80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 11 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107463f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 12 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107473880>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 13 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074871f0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 14 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107487580>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 15 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107487eb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 16 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10749b820>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing option 17 in dropdown 2: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10749bd90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 3: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074af700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 4: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074c30d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 5: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074c3670>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 6: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074c3fd0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 7: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074d5970>: Failed to establish a new connection: [Errno 61] Connection refused'))
+❌ Error processing dropdown 8: HTTPConnectionPool(host='localhost', port=54018): Max retries exceeded with url: /session/e3315608bf42c3d19245a146ccd429ca/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1074d5d30>: Failed to establish a new connection: [Errno 61] Connection refused'))

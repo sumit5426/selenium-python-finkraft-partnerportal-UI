@@ -1,0 +1,1 @@
+{"name": "Scroll down dashboard page till the end", "status": "skipped", "start": 1752150157829, "stop": 1752150157829, "uuid": "13108400-8202-4fbe-a74d-d5be4a759b3a", "testCaseId": "9b81d0e057fd07827c2c18fce54c41b1", "fullName": "src.tests.test_dashboard.TestDashBoard#test_scroll_to_bottom_of_dashboard"}

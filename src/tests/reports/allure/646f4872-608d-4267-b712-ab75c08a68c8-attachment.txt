@@ -1,0 +1,60 @@
+2025-07-09 15:44:49 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 15:44:50 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+Clicked second option (index 1) in dropdown 1
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 1: 3,05,668
+[✅] Value changed as expected for dropdown 1
+Dropdown 2 clicked
+Dropdown 2 has 13 options
+Clicked second option (index 1) in dropdown 2
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 2: 2,81,915
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 32 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 2,74,524
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 2,74,491
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 5: 2,74,018
+[✅] Value changed as expected for dropdown 5
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+Clicked second option (index 1) in dropdown 6
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+[❌] Error processing dropdown 6: Message: 
+
+Dropdown 7 clicked
+Dropdown 7 has 3 options
+Clicked second option (index 1) in dropdown 7
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 7: 41,800
+[✅] Value changed as expected for dropdown 7
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+Clicked second option (index 1) in dropdown 8
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 8: 39,019
+[✅] Value changed as expected for dropdown 8

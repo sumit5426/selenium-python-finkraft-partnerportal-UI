@@ -1,0 +1,106 @@
+2025-07-08 17:40:56 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 17:40:56 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+Clicked unselected second option in dropdown 1
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 1: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x000000010079cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000100794dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001002e63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001002ec0a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x00000001002ee3e4 cxxbridge1$string$len + 123408
+5   chromedriver                        0x00000001002ee460 cxxbridge1$string$len + 123532
+6   chromedriver                        0x00000001002ee48c cxxbridge1$string$len + 123576
+7   chromedriver                        0x00000001003284d4 cxxbridge1$string$len + 361216
+8   chromedriver                        0x0000000100322de4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x000000010036e934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x0000000100321834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x000000010075ffc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x000000010076322c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x0000000100741a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x0000000100763ae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x0000000100732a98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x00000001007839d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x0000000100783b64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x00000001007949e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 13 options
+Clicked unselected second option in dropdown 2
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 2: 2,81,915
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 32 options
+Clicked unselected second option in dropdown 3
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 3: 2,74,524
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+Clicked unselected second option in dropdown 4
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 4: 2,74,491
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+Clicked unselected second option in dropdown 5
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 5: 2,74,018
+[✅] Value changed as expected for dropdown 5
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+Clicked unselected second option in dropdown 6
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 6: 'NoneType' object has no attribute 'is_displayed'
+[❌] Error processing dropdown 7: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x000000010079cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000100794dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001002e63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001002c0144 chromedriver + 131396
+4   chromedriver                        0x000000010035560c cxxbridge1$string$len + 545848
+5   chromedriver                        0x000000010036e454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000100321834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x000000010075ffc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010076322c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000100741a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000100763ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000100732a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001007839d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000100783b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001007949e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+[❌] Error processing dropdown 8: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x000000010079cea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000100794dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001002e63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001002c0144 chromedriver + 131396
+4   chromedriver                        0x000000010035560c cxxbridge1$string$len + 545848
+5   chromedriver                        0x000000010036e454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000100321834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x000000010075ffc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010076322c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000100741a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000100763ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000100732a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001007839d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000100783b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001007949e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

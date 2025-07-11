@@ -1,0 +1,28 @@
+2025-07-08 17:46:59 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 17:47:00 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+Clicked unselected second option in dropdown 1
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 1: 3,05,668
+[✅] Value changed as expected for dropdown 1
+Dropdown 2 clicked
+Dropdown 2 has 13 options
+Clicked unselected second option in dropdown 2
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 2: 2,81,915
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 32 options
+Clicked unselected second option in dropdown 3
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 3: 2,74,524
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+[❌] Error processing dropdown 4: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[❌] Error processing dropdown 5: HTTPConnectionPool(host='localhost', port=62074): Max retries exceeded with url: /session/2fced84060683fae244c3a9a92d38edf/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1045275b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 6: HTTPConnectionPool(host='localhost', port=62074): Max retries exceeded with url: /session/2fced84060683fae244c3a9a92d38edf/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10451f430>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 7: HTTPConnectionPool(host='localhost', port=62074): Max retries exceeded with url: /session/2fced84060683fae244c3a9a92d38edf/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1045472b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 8: HTTPConnectionPool(host='localhost', port=62074): Max retries exceeded with url: /session/2fced84060683fae244c3a9a92d38edf/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104547c10>: Failed to establish a new connection: [Errno 61] Connection refused'))

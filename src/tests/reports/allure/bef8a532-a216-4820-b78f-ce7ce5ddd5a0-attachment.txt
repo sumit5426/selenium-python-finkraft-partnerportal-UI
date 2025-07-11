@@ -1,0 +1,61 @@
+2025-07-10 10:52:00 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-10 10:52:00 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 7 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 101 options
+Clicked second option (index 1) in dropdown 1
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 1: 7
+[⚠️] Value not changed as expected for dropdown , trying for more one time   1
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 1
+Dropdown 2 clicked
+Dropdown 2 has 52 options
+Clicked second option (index 1) in dropdown 2
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 2: 7
+[⚠️] Value not changed as expected for dropdown , trying for more one time   2
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 3 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 4187
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 6 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 4187
+[⚠️] Value not changed as expected for dropdown , trying for more one time   4
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 3 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 5: 99
+[✅] Value changed as expected for dropdown 5
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+Clicked second option (index 1) in dropdown 6
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 6: 1
+[✅] Value changed as expected for dropdown 6
+Dropdown 7 clicked
+Dropdown 7 has 3 options
+Clicked second option (index 1) in dropdown 7
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 7: 1
+[⚠️] Value not changed as expected for dropdown , trying for more one time   7
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 7

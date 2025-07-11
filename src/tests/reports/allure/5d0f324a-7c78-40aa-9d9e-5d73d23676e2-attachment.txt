@@ -1,0 +1,2 @@
+2025-07-10 10:38:00 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-10 10:38:01 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in

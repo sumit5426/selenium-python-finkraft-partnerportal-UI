@@ -1,0 +1,67 @@
+2025-07-08 15:50:01 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 15:50:02 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 1: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000100f80ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000100f78dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100aca3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100ad00a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x0000000100ad23e4 cxxbridge1$string$len + 123408
+5   chromedriver                        0x0000000100ad2460 cxxbridge1$string$len + 123532
+6   chromedriver                        0x0000000100ad248c cxxbridge1$string$len + 123576
+7   chromedriver                        0x0000000100b0c4d4 cxxbridge1$string$len + 361216
+8   chromedriver                        0x0000000100b06de4 cxxbridge1$string$len + 338960
+9   chromedriver                        0x0000000100b52934 cxxbridge1$string$len + 649056
+10  chromedriver                        0x0000000100b05834 cxxbridge1$string$len + 333408
+11  chromedriver                        0x0000000100f43fc0 cxxbridge1$str$ptr + 2473268
+12  chromedriver                        0x0000000100f4722c cxxbridge1$str$ptr + 2486176
+13  chromedriver                        0x0000000100f25a08 cxxbridge1$str$ptr + 2348924
+14  chromedriver                        0x0000000100f47ae8 cxxbridge1$str$ptr + 2488412
+15  chromedriver                        0x0000000100f16a98 cxxbridge1$str$ptr + 2287628
+16  chromedriver                        0x0000000100f679d8 cxxbridge1$str$ptr + 2619212
+17  chromedriver                        0x0000000100f67b64 cxxbridge1$str$ptr + 2619608
+18  chromedriver                        0x0000000100f789e8 cxxbridge1$str$ptr + 2688860
+19  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 13 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 2: 2,81,915
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 32 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 3: 2,74,524
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 4: 2,74,491
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 5: 2,74,018
+[✅] Value changed as expected for dropdown 5
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 6: Message: 
+
+Dropdown 7 clicked
+Dropdown 7 has 3 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 7: 41,800
+[✅] Value changed as expected for dropdown 7
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 8: 39,019
+[✅] Value changed as expected for dropdown 8

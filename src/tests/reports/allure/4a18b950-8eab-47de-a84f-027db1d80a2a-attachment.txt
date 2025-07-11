@@ -1,0 +1,84 @@
+2025-07-11 15:40:45 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-11 15:40:55 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+[Attempt 1] scrollTop: 1345.5, clientHeight: 672, scrollHeight: 2018, atBottom: True
+✅ Reached bottom of .ly-lineWrapper.
+[validate_all_dropdowns_have_values]
+Found 9 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 101 options
+Clicked second option (index 1) in dropdown 1
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 1: 3.5%
+[⚠️] Value not changed as expected for dropdown , trying for more one time   1
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 1
+[❌] Error processing dropdown 2: Message: element not interactable
+  (Session info: chrome=138.0.7204.101)
+Stacktrace:
+0   chromedriver                        0x0000000104d68ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000104d60dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001048b2260 cxxbridge1$string$len + 90252
+3   chromedriver                        0x00000001048fa568 cxxbridge1$string$len + 385940
+4   chromedriver                        0x00000001048ef358 cxxbridge1$string$len + 340356
+5   chromedriver                        0x00000001048eede4 cxxbridge1$string$len + 338960
+6   chromedriver                        0x000000010493a934 cxxbridge1$string$len + 649056
+7   chromedriver                        0x00000001048ed834 cxxbridge1$string$len + 333408
+8   chromedriver                        0x0000000104d2bfc0 cxxbridge1$str$ptr + 2473268
+9   chromedriver                        0x0000000104d2f22c cxxbridge1$str$ptr + 2486176
+10  chromedriver                        0x0000000104d0da08 cxxbridge1$str$ptr + 2348924
+11  chromedriver                        0x0000000104d2fae8 cxxbridge1$str$ptr + 2488412
+12  chromedriver                        0x0000000104cfea98 cxxbridge1$str$ptr + 2287628
+13  chromedriver                        0x0000000104d4f9d8 cxxbridge1$str$ptr + 2619212
+14  chromedriver                        0x0000000104d4fb64 cxxbridge1$str$ptr + 2619608
+15  chromedriver                        0x0000000104d609e8 cxxbridge1$str$ptr + 2688860
+16  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 3 clicked
+Dropdown 3 has 19 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 3.5%
+[⚠️] Value not changed as expected for dropdown , trying for more one time   3
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 3 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 3.5%
+[⚠️] Value not changed as expected for dropdown , trying for more one time   4
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 3 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 5: 3.5%
+[⚠️] Value not changed as expected for dropdown , trying for more one time   5
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 5
+Dropdown 6 clicked
+[wait_for_all_elements] Elements with locator ('xpath', '//span[@class="zdropdownlist__text"]') not found within seconds.
+Dropdown 6 has 0 options
+[ℹ️] Skipping dropdown 6 (only or two option)
+Dropdown 7 clicked
+Dropdown 7 has 2 options
+[ℹ️] Skipping dropdown 7 (only or two option)
+Dropdown 8 clicked
+Dropdown 8 has 2 options
+[ℹ️] Skipping dropdown 8 (only or two option)
+Dropdown 9 clicked
+Dropdown 9 has 101 options
+Clicked second option (index 1) in dropdown 9
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 9: 3.5%
+[⚠️] Value not changed as expected for dropdown , trying for more one time   9
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying for dropdown 9

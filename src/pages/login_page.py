@@ -29,7 +29,9 @@ class LoginPage(BrowserUtility):
         self.click(self.SUBMIT_BUTTON)
         self.enter_text(self.PASSWORD_TEXTBOX, password)
         self.click(self.SUBMIT_BUTTON)
+        self.visible_element(self.PROFILE_ICON)
         logger.info(f"Logged in with user: {username}")
+
         dashboard_page=DashBoardPage(self.driver)
         return dashboard_page
 

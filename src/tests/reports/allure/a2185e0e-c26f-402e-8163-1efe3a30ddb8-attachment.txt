@@ -1,0 +1,97 @@
+2025-07-09 17:44:18 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 17:44:19 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 12 dropdowns
+[❌] Error processing dropdown 1: Message: element not interactable
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x0000000105424ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x000000010541cdac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000104f6e260 cxxbridge1$string$len + 90252
+3   chromedriver                        0x0000000104fb6568 cxxbridge1$string$len + 385940
+4   chromedriver                        0x0000000104fab358 cxxbridge1$string$len + 340356
+5   chromedriver                        0x0000000104faade4 cxxbridge1$string$len + 338960
+6   chromedriver                        0x0000000104ff6934 cxxbridge1$string$len + 649056
+7   chromedriver                        0x0000000104fa9834 cxxbridge1$string$len + 333408
+8   chromedriver                        0x00000001053e7fc0 cxxbridge1$str$ptr + 2473268
+9   chromedriver                        0x00000001053eb22c cxxbridge1$str$ptr + 2486176
+10  chromedriver                        0x00000001053c9a08 cxxbridge1$str$ptr + 2348924
+11  chromedriver                        0x00000001053ebae8 cxxbridge1$str$ptr + 2488412
+12  chromedriver                        0x00000001053baa98 cxxbridge1$str$ptr + 2287628
+13  chromedriver                        0x000000010540b9d8 cxxbridge1$str$ptr + 2619212
+14  chromedriver                        0x000000010540bb64 cxxbridge1$str$ptr + 2619608
+15  chromedriver                        0x000000010541c9e8 cxxbridge1$str$ptr + 2688860
+16  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+Clicked second option (index 1) in dropdown 2
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 2: 731,221
+[❌] Value changed as expected for dropdown , trying for more one time   2
+('xpath', '//button[@aria-label="OK"]')
+Dropdown 3 clicked
+Dropdown 3 has 4 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 585,850
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 71 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 583,627
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 101 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 5: 583,627
+[❌] Value changed as expected for dropdown , trying for more one time   5
+('xpath', '//button[@aria-label="OK"]')
+Dropdown 6 clicked
+Dropdown 6 has 2 options
+[ℹ️] Skipping dropdown 6 (only or two option)
+Dropdown 7 clicked
+Dropdown 7 has 2 options
+[ℹ️] Skipping dropdown 7 (only or two option)
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+Clicked second option (index 1) in dropdown 8
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 8: 82,471
+[✅] Value changed as expected for dropdown 8
+Dropdown 9 clicked
+Dropdown 9 has 3 options
+Clicked second option (index 1) in dropdown 9
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 9: 82,471
+[❌] Value changed as expected for dropdown , trying for more one time   9
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying 9
+Dropdown 10 clicked
+Dropdown 10 has 101 options
+Clicked second option (index 1) in dropdown 10
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 10: 82,471
+[❌] Value changed as expected for dropdown , trying for more one time   10
+('xpath', '//button[@aria-label="OK"]')
+[❌] Value not changed as expected for dropdown after retrying 10
+Dropdown 11 clicked
+Dropdown 11 has 2 options
+[ℹ️] Skipping dropdown 11 (only or two option)
+Dropdown 12 clicked
+Dropdown 12 has 3 options
+Clicked second option (index 1) in dropdown 12
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 12: 2,713
+[✅] Value changed as expected for dropdown 12

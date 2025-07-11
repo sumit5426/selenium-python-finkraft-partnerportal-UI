@@ -1,0 +1,160 @@
+2025-07-09 17:23:40 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 17:23:41 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 12 dropdowns
+[❌] Error processing dropdown 1: Message: element not interactable
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001029acea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001029a4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001024f6260 cxxbridge1$string$len + 90252
+3   chromedriver                        0x000000010253e568 cxxbridge1$string$len + 385940
+4   chromedriver                        0x0000000102533358 cxxbridge1$string$len + 340356
+5   chromedriver                        0x0000000102532de4 cxxbridge1$string$len + 338960
+6   chromedriver                        0x000000010257e934 cxxbridge1$string$len + 649056
+7   chromedriver                        0x0000000102531834 cxxbridge1$string$len + 333408
+8   chromedriver                        0x000000010296ffc0 cxxbridge1$str$ptr + 2473268
+9   chromedriver                        0x000000010297322c cxxbridge1$str$ptr + 2486176
+10  chromedriver                        0x0000000102951a08 cxxbridge1$str$ptr + 2348924
+11  chromedriver                        0x0000000102973ae8 cxxbridge1$str$ptr + 2488412
+12  chromedriver                        0x0000000102942a98 cxxbridge1$str$ptr + 2287628
+13  chromedriver                        0x00000001029939d8 cxxbridge1$str$ptr + 2619212
+14  chromedriver                        0x0000000102993b64 cxxbridge1$str$ptr + 2619608
+15  chromedriver                        0x00000001029a49e8 cxxbridge1$str$ptr + 2688860
+16  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+Clicked second option (index 1) in dropdown 2
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 2: 723,113
+[✅] Value changed as expected for dropdown 2
+Dropdown 3 clicked
+Dropdown 3 has 4 options
+Clicked second option (index 1) in dropdown 3
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 3: 585,850
+[✅] Value changed as expected for dropdown 3
+Dropdown 4 clicked
+Dropdown 4 has 71 options
+Clicked second option (index 1) in dropdown 4
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 4: 583,627
+[✅] Value changed as expected for dropdown 4
+Dropdown 5 clicked
+Dropdown 5 has 101 options
+Clicked second option (index 1) in dropdown 5
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 5: 583,627
+[❌] Value did NOT change for dropdown 5
+[❌] Error processing dropdown 5: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x00000001029acea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001029a4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001024f63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001024fc0a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x00000001024fe66c cxxbridge1$string$len + 124056
+5   chromedriver                        0x00000001024fe6ec cxxbridge1$string$len + 124184
+6   chromedriver                        0x000000010257f648 cxxbridge1$string$len + 652404
+7   chromedriver                        0x000000010257e934 cxxbridge1$string$len + 649056
+8   chromedriver                        0x0000000102531834 cxxbridge1$string$len + 333408
+9   chromedriver                        0x000000010296ffc0 cxxbridge1$str$ptr + 2473268
+10  chromedriver                        0x000000010297322c cxxbridge1$str$ptr + 2486176
+11  chromedriver                        0x0000000102951a08 cxxbridge1$str$ptr + 2348924
+12  chromedriver                        0x0000000102973ae8 cxxbridge1$str$ptr + 2488412
+13  chromedriver                        0x0000000102942a98 cxxbridge1$str$ptr + 2287628
+14  chromedriver                        0x00000001029939d8 cxxbridge1$str$ptr + 2619212
+15  chromedriver                        0x0000000102993b64 cxxbridge1$str$ptr + 2619608
+16  chromedriver                        0x00000001029a49e8 cxxbridge1$str$ptr + 2688860
+17  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 6 clicked
+Dropdown 6 has 2 options
+[ℹ️] Skipping dropdown 6 (only or two option)
+Dropdown 7 clicked
+Dropdown 7 has 2 options
+[ℹ️] Skipping dropdown 7 (only or two option)
+Dropdown 8 clicked
+Dropdown 8 has 3 options
+Clicked second option (index 1) in dropdown 8
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 8: 82,687
+[✅] Value changed as expected for dropdown 8
+Dropdown 9 clicked
+Dropdown 9 has 3 options
+Clicked second option (index 1) in dropdown 9
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 9: 82,687
+[❌] Value did NOT change for dropdown 9
+[❌] Error processing dropdown 9: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x00000001029acea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001029a4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001024f63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001024fc0a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x00000001024fe66c cxxbridge1$string$len + 124056
+5   chromedriver                        0x00000001024fe6ec cxxbridge1$string$len + 124184
+6   chromedriver                        0x000000010257f648 cxxbridge1$string$len + 652404
+7   chromedriver                        0x000000010257e934 cxxbridge1$string$len + 649056
+8   chromedriver                        0x0000000102531834 cxxbridge1$string$len + 333408
+9   chromedriver                        0x000000010296ffc0 cxxbridge1$str$ptr + 2473268
+10  chromedriver                        0x000000010297322c cxxbridge1$str$ptr + 2486176
+11  chromedriver                        0x0000000102951a08 cxxbridge1$str$ptr + 2348924
+12  chromedriver                        0x0000000102973ae8 cxxbridge1$str$ptr + 2488412
+13  chromedriver                        0x0000000102942a98 cxxbridge1$str$ptr + 2287628
+14  chromedriver                        0x00000001029939d8 cxxbridge1$str$ptr + 2619212
+15  chromedriver                        0x0000000102993b64 cxxbridge1$str$ptr + 2619608
+16  chromedriver                        0x00000001029a49e8 cxxbridge1$str$ptr + 2688860
+17  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 10 clicked
+Dropdown 10 has 101 options
+Clicked second option (index 1) in dropdown 10
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 10: 82,687
+[❌] Value did NOT change for dropdown 10
+[❌] Error processing dropdown 10: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x00000001029acea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001029a4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x00000001024f63ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x00000001024fc0a0 cxxbridge1$string$len + 114380
+4   chromedriver                        0x00000001024fe66c cxxbridge1$string$len + 124056
+5   chromedriver                        0x00000001024fe6ec cxxbridge1$string$len + 124184
+6   chromedriver                        0x000000010257f648 cxxbridge1$string$len + 652404
+7   chromedriver                        0x000000010257e934 cxxbridge1$string$len + 649056
+8   chromedriver                        0x0000000102531834 cxxbridge1$string$len + 333408
+9   chromedriver                        0x000000010296ffc0 cxxbridge1$str$ptr + 2473268
+10  chromedriver                        0x000000010297322c cxxbridge1$str$ptr + 2486176
+11  chromedriver                        0x0000000102951a08 cxxbridge1$str$ptr + 2348924
+12  chromedriver                        0x0000000102973ae8 cxxbridge1$str$ptr + 2488412
+13  chromedriver                        0x0000000102942a98 cxxbridge1$str$ptr + 2287628
+14  chromedriver                        0x00000001029939d8 cxxbridge1$str$ptr + 2619212
+15  chromedriver                        0x0000000102993b64 cxxbridge1$str$ptr + 2619608
+16  chromedriver                        0x00000001029a49e8 cxxbridge1$str$ptr + 2688860
+17  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 11 clicked
+Dropdown 11 has 2 options
+[ℹ️] Skipping dropdown 11 (only or two option)
+Dropdown 12 clicked
+Dropdown 12 has 3 options
+Clicked second option (index 1) in dropdown 12
+('xpath', '//button[@aria-label="OK"]')
+OK button clicked after selecting second option (confirmed enabled)
+After Value for dropdown 12: 2,713
+[✅] Value changed as expected for dropdown 12

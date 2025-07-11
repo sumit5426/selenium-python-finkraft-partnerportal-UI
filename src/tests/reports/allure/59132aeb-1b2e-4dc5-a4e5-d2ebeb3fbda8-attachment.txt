@@ -1,0 +1,36 @@
+2025-07-09 12:51:11 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-09 12:51:11 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+[❌] Error processing dropdown 1: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//label[contains(@class, "zdropdownlist__checkboxlabel")]"}
+  (Session info: chrome=138.0.7204.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000101190ea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x0000000101188dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100cda3ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100d21544 cxxbridge1$string$len + 381808
+4   chromedriver                        0x0000000100d16de4 cxxbridge1$string$len + 338960
+5   chromedriver                        0x0000000100d62934 cxxbridge1$string$len + 649056
+6   chromedriver                        0x0000000100d15834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x0000000101153fc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010115722c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000101135a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000101157ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000101126a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001011779d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x0000000101177b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001011889e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+[❌] Error processing dropdown 2: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[❌] Error processing dropdown 3: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106de0f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 4: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106de0e80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 5: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106df5b80>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 6: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106e0b520>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 7: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106df5af0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[❌] Error processing dropdown 8: HTTPConnectionPool(host='localhost', port=54608): Max retries exceeded with url: /session/aace2e706470ad1df1d62256b7d787b4/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106e0bdc0>: Failed to establish a new connection: [Errno 61] Connection refused'))

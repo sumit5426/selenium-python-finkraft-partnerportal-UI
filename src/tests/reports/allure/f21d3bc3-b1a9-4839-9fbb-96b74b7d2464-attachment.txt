@@ -1,0 +1,6 @@
+2025-07-11 17:41:02 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-11 17:41:09 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+('css selector', '.scrollFreeze')
+[visible_element] Element with locator ('css selector', '.scrollFreeze') not visible after 10 seconds.
+2025-07-11 17:41:24 | INFO     | dashboard_page.py:is_widget_visible:77 - pages.dashboard_page - Widget 'tables' is visible: False

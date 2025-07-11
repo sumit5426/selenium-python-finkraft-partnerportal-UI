@@ -1,0 +1,6 @@
+Switching workspace
+2025-07-11 17:27:15 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+[visible_element] Element with locator ('xpath', '(//span[@class="ant-avatar-string"])[1]') not visible after 10 seconds.
+2025-07-11 17:27:26 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+Switching workspace from page class

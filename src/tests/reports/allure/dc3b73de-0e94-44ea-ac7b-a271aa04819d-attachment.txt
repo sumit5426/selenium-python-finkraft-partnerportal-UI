@@ -1,0 +1,45 @@
+2025-07-08 14:59:31 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 14:59:32 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdoxwns_have_values]
+Found 8 dropdowns
+dropdown is clicked
+Dropdown 1 has 4 options
+[ℹ️] No value selected in dropdown 1, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 1: 3,05,668
+dropdown is clicked
+Dropdown 2 has 13 options
+[ℹ️] No value selected in dropdown 2, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 2: 2,81,915
+dropdown is clicked
+Dropdown 3 has 32 options
+[ℹ️] No value selected in dropdown 3, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 3: 2,74,524
+dropdown is clicked
+Dropdown 4 has 51 options
+[ℹ️] No value selected in dropdown 4, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 4: 2,74,491
+dropdown is clicked
+Dropdown 5 has 71 options
+[ℹ️] No value selected in dropdown 5, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 5: 2,74,018
+dropdown is clicked
+Dropdown 6 has 3 options
+[ℹ️] No value selected in dropdown 6, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+Error processing dropdown 6: Message: 
+
+dropdown is clicked
+Dropdown 7 has 3 options
+[ℹ️] No value selected in dropdown 7, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 7: 41,800
+dropdown is clicked
+Dropdown 8 has 3 options
+[ℹ️] No value selected in dropdown 8, selecting first.
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+After Value for dropdown 8: 39,019

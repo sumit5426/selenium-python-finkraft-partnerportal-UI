@@ -1,0 +1,1 @@
+{"name": "All key widgets and UI elements are visible on dashboard", "status": "skipped", "start": 1751968656236, "stop": 1751968656236, "uuid": "eeac4f7e-de55-4b45-9606-c92f274b3ff6", "testCaseId": "51b69086c0f673ca3158a1d4c104a59b", "fullName": "src.tests.test_dashboard.TestDashBoard#test_dashboard_module_lists"}

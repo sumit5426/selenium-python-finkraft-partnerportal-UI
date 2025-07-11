@@ -1,0 +1,83 @@
+2025-07-08 17:37:36 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+2025-07-08 17:37:37 | INFO     | login_page.py:login:32 - pages.login_page - Logged in with user: sumit@kgrp.in
+[validate_all_dropdowns_have_values]
+Found 8 dropdowns
+Dropdown 1 clicked
+Dropdown 1 has 4 options
+⚠️ Could not check checkbox selection in dropdown 1: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 1: Message: 
+
+Dropdown 2 clicked
+Dropdown 2 has 17 options
+⚠️ Could not check checkbox selection in dropdown 2: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 2: Message: 
+
+Dropdown 3 clicked
+Dropdown 3 has 35 options
+⚠️ Could not check checkbox selection in dropdown 3: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 3: Message: 
+
+Dropdown 4 clicked
+Dropdown 4 has 51 options
+⚠️ Could not check checkbox selection in dropdown 4: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 4: Message: 
+
+Dropdown 5 clicked
+Dropdown 5 has 71 options
+⚠️ Could not check checkbox selection in dropdown 5: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 5: Message: 
+
+Dropdown 6 clicked
+Dropdown 6 has 3 options
+⚠️ Could not check checkbox selection in dropdown 6: can only concatenate str (not "bool") to str
+('xpath', '//button[@aria-label="OK"]//span[@class="zbutton__text"]')
+[❌] Error processing dropdown 6: 'NoneType' object has no attribute 'is_displayed'
+[❌] Error processing dropdown 7: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001013ccea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001013c4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100f163ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100ef0144 chromedriver + 131396
+4   chromedriver                        0x0000000100f8560c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000100f9e454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000100f51834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x000000010138ffc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010139322c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000101371a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000101393ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000101362a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001013b39d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001013b3b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001013c49e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+
+[❌] Error processing dropdown 8: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.93)
+Stacktrace:
+0   chromedriver                        0x00000001013ccea4 cxxbridge1$str$ptr + 2722840
+1   chromedriver                        0x00000001013c4dac cxxbridge1$str$ptr + 2689824
+2   chromedriver                        0x0000000100f163ec cxxbridge1$string$len + 90648
+3   chromedriver                        0x0000000100ef0144 chromedriver + 131396
+4   chromedriver                        0x0000000100f8560c cxxbridge1$string$len + 545848
+5   chromedriver                        0x0000000100f9e454 cxxbridge1$string$len + 647808
+6   chromedriver                        0x0000000100f51834 cxxbridge1$string$len + 333408
+7   chromedriver                        0x000000010138ffc0 cxxbridge1$str$ptr + 2473268
+8   chromedriver                        0x000000010139322c cxxbridge1$str$ptr + 2486176
+9   chromedriver                        0x0000000101371a08 cxxbridge1$str$ptr + 2348924
+10  chromedriver                        0x0000000101393ae8 cxxbridge1$str$ptr + 2488412
+11  chromedriver                        0x0000000101362a98 cxxbridge1$str$ptr + 2287628
+12  chromedriver                        0x00000001013b39d8 cxxbridge1$str$ptr + 2619212
+13  chromedriver                        0x00000001013b3b64 cxxbridge1$str$ptr + 2619608
+14  chromedriver                        0x00000001013c49e8 cxxbridge1$str$ptr + 2688860
+15  libsystem_pthread.dylib             0x00000001967c5f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x00000001967c0d34 thread_start + 8
+

@@ -6,6 +6,7 @@ import yaml
 import os
 from pathlib import Path
 import allure
+import json
 
 from src.utils.webdriver_factory import WebDriverFactory
 
@@ -98,3 +99,26 @@ def pytest_runtest_makereport(item, call):
                     name=file_name,
                     attachment_type=allure.attachment_type.PNG
                 )
+
+
+def pytest_sessionstart(session):
+    allure_dir = "reports/allure"
+    os.makedirs(allure_dir, exist_ok=True)
+
+    with open(os.path.join(allure_dir, "environment.properties"), "w") as f:
+        f.write("OS=macOS\nBrowser=Chrome\nTestEnv=QA\n")
+
+    with open(os.path.join(allure_dir, "executor.json"), "w") as f:
+        json.dump({
+            "name": "Manual Execution",
+            "type": "local",
+            "buildName": "Build-2025-07-04",
+            "reportName": "Allure Pytest Report"
+        }, f, indent=2)
+
+    with open(os.path.join(allure_dir, "categories.json"), "w") as f:
+        json.dump([
+            {"name": "Product defects", "matchedStatuses": ["failed"]},
+            {"name": "Test defects", "matchedStatuses": ["broken"]}
+        ], f, indent=2)
+

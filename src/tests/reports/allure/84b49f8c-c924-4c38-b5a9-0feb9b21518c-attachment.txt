@@ -1,0 +1,5 @@
+2025-07-11 15:31:12 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-11 15:31:17 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+[Attempt 1] scrollTop: 1282.5, clientHeight: 672, scrollHeight: 1955, atBottom: True
+✅ Reached bottom of .ly-lineWrapper.

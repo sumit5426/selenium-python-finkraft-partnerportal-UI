@@ -1,0 +1,33 @@
+2025-07-10 15:53:52 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
+('xpath', '(//span[@class="ant-avatar-string"])[1]')
+2025-07-10 15:53:58 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
+[Wheel 1] scrollTop: 0, atBottom: False
+[Wheel 2] scrollTop: 0, atBottom: False
+[Wheel 3] scrollTop: 0, atBottom: False
+[Wheel 4] scrollTop: 0, atBottom: False
+[Wheel 5] scrollTop: 0, atBottom: False
+[Wheel 6] scrollTop: 0, atBottom: False
+[Wheel 7] scrollTop: 0, atBottom: False
+[Wheel 8] scrollTop: 0, atBottom: False
+[Wheel 9] scrollTop: 0, atBottom: False
+[Wheel 10] scrollTop: 0, atBottom: False
+[Wheel 11] scrollTop: 0, atBottom: False
+[Wheel 12] scrollTop: 0, atBottom: False
+[Wheel 13] scrollTop: 0, atBottom: False
+[Wheel 14] scrollTop: 0, atBottom: False
+[Wheel 15] scrollTop: 0, atBottom: False
+[Wheel 16] scrollTop: 0, atBottom: False
+[Wheel 17] scrollTop: 0, atBottom: False
+[Wheel 18] scrollTop: 0, atBottom: False
+[Wheel 19] scrollTop: 0, atBottom: False
+[Wheel 20] scrollTop: 0, atBottom: False
+[Wheel 21] scrollTop: 0, atBottom: False
+[Wheel 22] scrollTop: 0, atBottom: False
+[Wheel 23] scrollTop: 0, atBottom: False
+[Wheel 24] scrollTop: 0, atBottom: False
+[Wheel 25] scrollTop: 0, atBottom: False
+[Wheel 26] scrollTop: 0, atBottom: False
+[Wheel 27] scrollTop: 0, atBottom: False
+[Wheel 28] scrollTop: 0, atBottom: False
+[Wheel 29] scrollTop: 0, atBottom: False
+[Wheel 30] scrollTop: 0, atBottom: False
