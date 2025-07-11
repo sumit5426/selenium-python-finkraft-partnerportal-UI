@@ -3,3 +3,5 @@
 src/tests/logs/
 logs
 src/tests/reports/screenshots/
+reports/allure/
+src/tests/reports/allure/
