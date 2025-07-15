@@ -15,10 +15,14 @@ environments:
         expected_top_modules:
           - Dashboard - Airline
           - Dashboard - Hotel
-      client2:
-        url: "https://client2.qa.example.com"
-        username: "user2"
-        password: "pass2"
+      MMT:
+        url: "https://mmt.finkraft.ai/auth/signin"
+        username: ${QA_YATRA_USERNAME}
+        password: ${QA_YATRA_PASSWORD}
         workspaces:
-          - workspaceA
-          - workspaceB
+          - Mankind pharma
+          - Kotak securities
+        expected_top_modules:
+          - Dashboard - Airline
+          - Dashboard - Hotel New
+          - Airline Sales Summary

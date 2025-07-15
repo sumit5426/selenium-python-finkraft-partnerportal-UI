@@ -16,7 +16,7 @@ class TestLogin:
         logger.info("Testing login with valid credentials")
         login_page = LoginPage(driver)
         login_page.login(config["username"], config["password"])
-        assert "Dashboardpage" in driver.title
+        assert "Finkraft" in driver.title
 
     @pytest.mark.regression
     @allure.title("Login with empty username")

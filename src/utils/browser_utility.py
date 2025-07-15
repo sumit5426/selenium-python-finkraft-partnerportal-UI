@@ -12,8 +12,16 @@ class BrowserUtility:
         self.wait = WebDriverWait(driver, 10)
 
     def click(self, locator):
-        self.wait.until(EC.element_to_be_clickable(locator)).click()
-        return self
+        try:
+            element = self.wait.until(EC.element_to_be_clickable(locator))
+            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+            try:
+                element.click()
+            except ElementClickInterceptedException:
+                self.driver.execute_script("arguments[0].click();", element)
+            return self
+        except TimeoutException:
+            raise Exception(f"[CLICK ERROR] Element not clickable: {locator}")
 
     def enter_text(self, locator, text):
         self.wait.until(EC.visibility_of_element_located(locator)).send_keys(text)
@@ -47,6 +55,7 @@ class BrowserUtility:
             element = self.wait.until(
                 EC.visibility_of_element_located(locator)
             )
+            print(f"text is visible: {element.text}")
             return element.text
         except TimeoutException:
             return None
@@ -117,6 +126,36 @@ class BrowserUtility:
 
         print(f"⚠️ Could not confirm scroll to bottom of {selector}.")
         return False
+
+    def switch_to_iframe(self, iframeLocator):
+        try:
+            print("⏳ Waiting for dashboard iframe to be available...")
+            self.wait.until(
+                EC.frame_to_be_available_and_switch_to_it(iframeLocator)
+            )
+            print("✅ Switched to dashboard iframe")
+        except TimeoutException:
+            print("❌ Timeout: Could not switch to dashboard iframe.")
+            raise
+
+    def switch_to_default_content(self):
+        try:
+            self.driver.switch_to.default_content()
+            print("✅ [switch_to_default_content] Switched back to main content.")
+        except Exception as e:
+            print(f"❌ Failed to switch to default content: {e}")
+            raise
+
+    def get_visible_modules_texts(self,elements):
+        """Return a list of visible module names from sidebar."""
+        return [el.text.strip() for el in elements if el.is_displayed() and el.text.strip()]
+
+    def is_element_present(self, locator,timeout=2):
+        try:
+            WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located(locator))
+            return True
+        except TimeoutException:
+            return False
 
 
 

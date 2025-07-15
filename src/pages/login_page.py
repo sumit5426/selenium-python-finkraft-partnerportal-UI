@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selenium.webdriver.common.by import By
 
@@ -17,7 +19,9 @@ class LoginPage(BrowserUtility):
     SIGNIN_BUTTON = (By.CSS_SELECTOR, 'button[type="submit"]')
     ERROR_MESSAGE = (By.XPATH, '//div[@class="ant-form-item-explain-error"]')
     PROFILE_ICON = (By.XPATH,'(//span[@class="ant-avatar-string"])[1]')
-    LOGOUT_BUTTON = (By.XPATH, "// div[normalize-space()='Logout']")
+    LOGOUT_BUTTON = (By.XPATH, "//div[normalize-space()='Logout']")
+    DASHBOARD_MODULE=(By.XPATH,"//div[@class='MenuContainer']//div[1]")
+    CRED_MODULE=(By.XPATH,"//div[@class='MenuContainer']//div[2]")
 
 
     @allure.feature("Login Feature")
@@ -30,6 +34,11 @@ class LoginPage(BrowserUtility):
         self.enter_text(self.PASSWORD_TEXTBOX, password)
         self.click(self.SUBMIT_BUTTON)
         self.visible_element(self.PROFILE_ICON)
+        self.click(self.PROFILE_ICON)
+        time.sleep(4)
+        self.click(self.CRED_MODULE)
+        self.click(self.DASHBOARD_MODULE)
+
         logger.info(f"Logged in with user: {username}")
 
         dashboard_page=DashBoardPage(self.driver)
@@ -40,7 +49,10 @@ class LoginPage(BrowserUtility):
         self.click(self.SUBMIT_BUTTON)
         self.enter_text(self.PASSWORD_TEXTBOX, password)
         self.click(self.SUBMIT_BUTTON)
+        self.visible_element(self.PROFILE_ICON)
         self.click(self.PROFILE_ICON)
+        time.sleep(4)
+        self.visible_element(self.LOGOUT_BUTTON)
         self.click(self.LOGOUT_BUTTON)
         return self.is_signin_page_url()
 

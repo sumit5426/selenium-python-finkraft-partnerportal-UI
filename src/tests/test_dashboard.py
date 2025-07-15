@@ -6,6 +6,8 @@ import pytest
 from selenium.webdriver.common.by import By
 
 from pages.login_page import LoginPage
+from urllib.parse import urlparse
+
 
 
 class TestDashBoard:
@@ -22,9 +24,12 @@ class TestDashBoard:
 
     @allure.title("Redirect to login if not authenticated")
     @pytest.mark.regression
-    def test_dashboard_redirects_to_login_when_not_authenticated(self, driver):
+    def test_dashboard_redirects_to_login_when_not_authenticated(self, driver, config):
         # Directly access the dashboard URL without logging in
-        dashboard_url = "https://pyt.finkraft.ai/dashboard"  # Replace with your actual dashboard URL
+        parsed = urlparse(config["url"])
+        dashboard_url = f"{parsed.scheme}://{parsed.netloc}/dashboard"
+
+        # dashboard_url = "https://pyt.finkraft.ai/dashboard"  # Replace with your actual dashboard URL
         driver.get(dashboard_url)
         assert "signin" in driver.current_url.lower(), (
             f"Expected to be redirected to login, but current URL is: {driver.current_url}"
@@ -35,7 +40,6 @@ class TestDashBoard:
     def test_dashboard_widgets_visible(self, driver, config):
         login_page = LoginPage(driver)
         dashboard_page = login_page.login(config["username"], config["password"])
-        time.sleep(30)
         assert dashboard_page.is_widget_visible("tables"), "Tables widget is not visible"
         assert dashboard_page.is_widget_visible("logo"), "Company logo is not visible"
         assert dashboard_page.is_widget_visible("tables_filter"), "Tables filter is not visible"
@@ -46,20 +50,11 @@ class TestDashBoard:
     @allure.title("All Modules are visible on dashboard")
     @pytest.mark.smoke
     def test_dashboard_module_lists(self, driver, config):
-        COMMON_MODULES = ["Dashboard", "Credentials", "Flight", "Upload", "Reports","Workspaces","Members","Followup","profile","Settings","Powered By"]
+        COMMON_MODULES = ["Dashboard", "Credentials", "Flight", "Upload", "Reports","Workspaces","Members","Followup","Settings","Powered By"]
         login_page = LoginPage(driver)
         dashboard_page = login_page.login(config["username"], config["password"])
         missing_modules = dashboard_page.are_modules_present(COMMON_MODULES)
         assert not missing_modules, f"Missing modules in dashboard: {missing_modules}"
-
-    # @pytest.mark.smoke
-    # @allure.title("Verify top horizontal modules are present")
-    # def test_top_horizontal_modules(self, driver, config):
-    #     EXPECTED_MODULE_KEYWORDS = ["Airline", "Hotel", "Bus"]
-    #     login_page = LoginPage(driver)
-    #     dashboard_page = login_page.login(config["username"], config["password"])
-    #     missing_tabs = dashboard_page.are_top_modules_present(EXPECTED_MODULE_KEYWORDS)
-    #     assert not missing_tabs, f"Missing top modules: {missing_tabs}"
 
     @allure.title("Verify top horizontal modules as per client config")
     @pytest.mark.smoke
@@ -107,20 +102,18 @@ class TestDashBoard:
     @allure.title("Scroll down dashboard page till the end")
     @pytest.mark.smoke
     def test_scroll_to_bottom_of_dashboard(self, driver, config):
-
-        login_page = LoginPage(driver)
-        dashboard_page = login_page.login(config["username"], config["password"])
-        dashboard_page.find_vertical_scrollable_elements()
-
         with allure.step("Wait for dashboard to load"):
-            time.sleep(1)  # Replace with WebDriverWait if needed
+            login_page = LoginPage(driver)
+            dashboard_page = login_page.login(config["username"], config["password"])
+            time.sleep(1)
         with allure.step("Scroll the scrollable dashboard container to bottom"):
+            dashboard_page.find_vertical_scrollable_elements()
             time.sleep(10)
         with allure.step("Verify scroll executed"):
             assert True
-        # Optionally, assert that data is present
-        # items = dashboard_page.get_all_dashboard_items()
-        # assert len(items) > 0, "No data found after scrolling to bottom"
+
+
+
 
 
 

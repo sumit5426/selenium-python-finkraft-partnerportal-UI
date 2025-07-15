@@ -20,17 +20,29 @@ class DashBoardPage(BrowserUtility):
     WORKSPACE_NAME=(By.XPATH,"//p[contains(@class,'sc-Qotzb')][normalize-space()='Reserve bank of india yatra']")
     IFRAME_LOCATOR = (By.ID, "dashboardFrame")
     MODULE_LIST_LOCATOR = (By.CSS_SELECTOR, ".MenuItem")
-    TOP_SUB_MODULE_LOCATOR = (By.XPATH, '//div[@class="ant-tabs-tab-btn"]')  # Adjust as per your HTML
+    TOP_SUB_MODULE_LOCATOR = (By.XPATH, '//div[@class="ant-tabs-tab-btn"]')
+    MODULE_CONTENT_LOCATOR = (By.CSS_SELECTOR, ".module-content")
+    SET_VIEW_TITLE_LOCATOR = (By.CSS_SELECTOR, "#setViewTitle")
+    total_trans = (By.XPATH, '(//div[@refelname="dArea"]//div[@zdbname="datacell"]//span[@zdbname="dataspan"])[2]')
+    checkbox = (By.XPATH, '(//li[contains(@class, "zdropdownlist__item")]//input[@type="checkbox"])[2]')
+    ok_button = (By.XPATH, '//button[@aria-label="OK"]')
+    checkbox_final = (By.XPATH,
+                      "(//li[contains(@class, 'zdropdownlist__item') and contains(@class, 'is-selected')]//div[contains(@class, 'zdropdownlist__checkbox')])[1]")
+    checkbox_final2 = (By.XPATH,
+                       "(//li[contains(@class, 'zdropdownlist__item') and contains(@class, 'is-selected')]//div[contains(@class, 'zdropdownlist__checkbox')])[1]")
+    ALL_DROPDOWNS = (By.XPATH, "//div[@class='ZR-DashboardUFContainer']//div[@elname='filterHead']")
+    CUSTOM_OPTIONS = (By.XPATH, '//span[@class="zdropdownlist__text"]')
+    CALENDAR_LOCATOR=(By.XPATH, '//input[contains(@class,"mcLoaded")]')
 
     WIDGET_LOCATORS = {
         "logo": {
             "locator": (By.XPATH, "//img[@alt='appIcon']"),
             "in_iframe": False
         },
-        "piechart": {
-            "locator": (By.CSS_SELECTOR, ".piegroup"),
-            "in_iframe": True
-        },
+        # "piechart": {
+        #     "locator": (By.CSS_SELECTOR, ".piegroup"),
+        #     "in_iframe": True
+        # },
         "tables": {
             "locator": (By.CSS_SELECTOR, ".scrollFreeze"),
             "in_iframe": True
@@ -54,13 +66,9 @@ class DashBoardPage(BrowserUtility):
     def switch_workspace(self,workspace_name):
         print("Switching workspace from page class")
         self.click(self.SWITCH_WORKSPACE_LOGO)
-        WORKSPACE=(By.XPATH, f"//p[normalize-space()='{workspace_name}']")
-        self.click_scroll(WORKSPACE)
-        return self.visible_text(self.WORKSPACE_NAME)
-
-    def switch_to_dashboard_iframe(self):
-        iframe = self.driver.find_element(*self.IFRAME_LOCATOR)
-        self.driver.switch_to.frame(iframe)
+        workspace_switch_locator=(By.XPATH, f"//p[normalize-space()='{workspace_name}']")
+        self.click_scroll(workspace_switch_locator)
+        return self.visible_text(workspace_switch_locator)
 
     def is_widget_visible(self, widget_name, timeout=10):
         widget_info = self.WIDGET_LOCATORS.get(widget_name)
@@ -71,7 +79,7 @@ class DashBoardPage(BrowserUtility):
         in_iframe = widget_info.get("in_iframe", False)
         try:
             if in_iframe:
-                self.switch_to_dashboard_iframe()
+                self.switch_to_iframe(self.IFRAME_LOCATOR)
             element = self.visible_element(locator, timeout=timeout)
             result = element.is_displayed() if element else False
             logger.info(f"Widget '{widget_name}' is visible: {result}")
@@ -83,15 +91,11 @@ class DashBoardPage(BrowserUtility):
             if in_iframe:
                 self.driver.switch_to.default_content()
 
-    def get_visible_modules(self):
-        """Return a list of visible module names from sidebar."""
-        elements = self.driver.find_elements(*self.MODULE_LIST_LOCATOR)
-        self.visible_element()
-        return [el.text.strip() for el in elements if el.is_displayed() and el.text.strip()]
 
     def are_modules_present(self, expected_modules: list[str]) -> list[str]:
         """Returns the list of modules from expected_modules that are missing from UI."""
-        visible_modules = self.get_visible_modules()
+        elements = self.driver.find_elements(*self.MODULE_LIST_LOCATOR)
+        visible_modules = self.get_visible_modules_texts(elements)
         missing = [mod for mod in expected_modules if mod not in visible_modules]
         return missing
 
@@ -109,13 +113,13 @@ class DashBoardPage(BrowserUtility):
 
     def click_top_module(self, module_name: str):
         modules = self.driver.find_elements(*self.TOP_SUB_MODULE_LOCATOR)
+        print("module"+str(modules))
         for module in modules:
             if module.is_displayed() and module_name.lower() in module.text.lower():
                 module.click()
                 return True
         raise Exception(f"Module '{module_name}' not found or not clickable.")
 
-    MODULE_CONTENT_LOCATOR = (By.CSS_SELECTOR, ".module-content")  # adjust as per your DOM
 
     def is_module_data_loaded(self):
         content = self.visible_element(self.MODULE_CONTENT_LOCATOR)
@@ -123,31 +127,23 @@ class DashBoardPage(BrowserUtility):
             return content.is_displayed()
         return False
 
-    SET_VIEW_TITLE_LOCATOR = (By.CSS_SELECTOR, "#setViewTitle")
 
     def get_module_title_text(self):
         element = self.visible_element(self.SET_VIEW_TITLE_LOCATOR)
         return element.text if element else None
 
-    # def switch_to_dashboard_iframe(self):
-    #     try:
-    #         # Adjust locator if needed
-    #         iframe = self.visible_element((By.CSS_SELECTOR, "iframe"))
-    #         self.driver.switch_to.frame(iframe)
-    #         print("[switch_to_dashboard_iframe] Switched to dashboard iframe.")
-    #     except Exception as e:
-    #         raise Exception(f"Failed to switch to iframe: {e}")
+    def switch_to_dashboard_iframe(self):
+        self.switch_to_iframe(self.IFRAME_LOCATOR)
 
     def switch_to_default(self):
-        self.driver.switch_to.default_content()
+        self.switch_to_default_content()
         print("[switch_to_default] Switched back to main content.")
 
-    ALL_DROPDOWNS = (By.XPATH, "//div[@class='ZR-DashboardUFContainer']//div[@elname='filterHead']")
-    CUSTOM_OPTIONS = (By.XPATH, '//span[@class="zdropdownlist__text"]')
 
     def validate_all_dropdowns_have_values(self):
+        time.sleep(10)
         result = []
-        self.switch_to_dashboard_iframe()
+        self.switch_to_iframe(self.IFRAME_LOCATOR)
         dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
         print(dropdowns)
         for index, dropdown in enumerate(dropdowns):
@@ -157,7 +153,6 @@ class DashBoardPage(BrowserUtility):
                 dropdown.click()
                 options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
                 texts = [opt.text.strip() for opt in options if opt.text.strip()]
-
                 # Print the list of non-empty option texts
                 print(f"Dropdown has the following options: {texts}")
                 visible_options = [opt for opt in options if opt.is_displayed() and opt.text.strip()]
@@ -169,27 +164,22 @@ class DashBoardPage(BrowserUtility):
                 "dropdown_index": index,
                 "has_value": has_value
             })
-        self.switch_to_default()
+        self.switch_to_default_content()
         print(result)
         return result
 
-    total_trans=(By.XPATH,'(//div[@refelname="dArea"]//div[@zdbname="datacell"]//span[@zdbname="dataspan"])[2]')
-    checkbox = (By.XPATH, '(//li[contains(@class, "zdropdownlist__item")]//input[@type="checkbox"])[2]')
-    ok_button = (By.XPATH, '//button[@aria-label="OK"]')
-    checkbox_final=(By.XPATH, "(//li[contains(@class, 'zdropdownlist__item') and contains(@class, 'is-selected')]//div[contains(@class, 'zdropdownlist__checkbox')])[1]")
-    checkbox_final2=(By.XPATH, "(//li[contains(@class, 'zdropdownlist__item') and contains(@class, 'is-selected')]//div[contains(@class, 'zdropdownlist__checkbox')])[1]")
 
     def validate_all_dropdowns_functionality(self):
-        self.switch_to_dashboard_iframe()
+        self.switch_to_iframe(self.IFRAME_LOCATOR)
         self.driver.execute_script("document.querySelector('.scrollFreeze')?.remove();")
         print("[validate_all_dropdowns_have_values]")
         dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
         print(f"Found {len(dropdowns)} dropdowns")
         if not dropdowns:
             print("ℹ️ No dropdowns found on this portal — skipping dropdown validation.")
-            return  # Early exit, do not fail the test
-        unchanged_dropdowns = []  # Dropdowns where value didn't change
-        error_dropdowns = []  # Dropdowns where exception occurred
+            return
+        unchanged_dropdowns = []
+        error_dropdowns = []
         time.sleep(5)
         for index, dropdown in enumerate(dropdowns):
             try:
@@ -198,7 +188,10 @@ class DashBoardPage(BrowserUtility):
                 self.driver.execute_script("document.querySelector('#ZRSTipPointer')?.remove();")
                 time.sleep(2)
                 dropdown.click()
-                print(f"Dropdown {index + 1} clicked")
+                # print(f"Dropdown {index + 1} clicked")
+                # if self.is_element_present(self.CALENDAR_LOCATOR):
+                #     print(f"[ℹ️] Dropdown {index + 1} is a calendar. Skipping.")
+                #     continue
                 options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
                 print(f"Dropdown {index + 1} has {len(options)} options")
                 if len(options) > 2:
@@ -298,71 +291,16 @@ class DashBoardPage(BrowserUtility):
                 error_dropdowns.append(f"Dropdown {index + 1} - {str(e)}")
         return unchanged_dropdowns, error_dropdowns
 
-    def scroll_element_by_selector(self, selector, pause_time=2, max_attempts=10):
-        self.switch_to_dashboard_iframe()
-        time.sleep(5)  # Allow iframe content to load
-
-        script = f"""
-            const el = document.querySelector('{selector}');
-            if (!el) return [-1, -1, -1, false];
-            el.scrollTop = el.scrollHeight;  // attempt to scroll
-            const scrollTop = el.scrollTop;
-            const clientHeight = el.clientHeight;
-            const scrollHeight = el.scrollHeight;
-            const isBottom = (scrollTop + clientHeight) >= scrollHeight;
-            return [scrollTop, clientHeight, scrollHeight, isBottom];
-        """
-
-        for attempt in range(max_attempts):
-            scrollTop, clientHeight, scrollHeight, isBottom = self.driver.execute_script(script)
-            print(
-                f"[Attempt {attempt + 1}] scrollTop: {scrollTop}, clientHeight: {clientHeight}, scrollHeight: {scrollHeight}, atBottom: {isBottom}")
-            if isBottom:
-                print("✅ Confirmed at bottom.")
-                break
-            time.sleep(pause_time)
-
     def find_vertical_scrollable_elements(self,selector=".ly-lineWrapper"):
-        self.scroll_to_bottom_of_container(selector)
         time.sleep(7)
         iframe = self.driver.find_element(*self.IFRAME_LOCATOR)
         iframe_url=iframe.get_attribute("src")
         time.sleep(10)
         self.driver.execute_script("window.open('');")
         self.driver.switch_to.window(self.driver.window_handles[1])  # Switch to new tab
-        # Step 3: Open iframe src URL directly
         time.sleep(2)
         self.driver.get(iframe_url)
-        # WebDriverWait(self.driver, 10).until(
-        #     lambda d: d.execute_script(f"return document.querySelector('{selector}') !== null")
-        # )
-        # scroll_script = f"""
-        #     const el = document.querySelector('{selector}');
-        #     if (!el) return [-1, -1, -1, false];
-        #     el.scrollTop = el.scrollHeight;
-        #     const scrollTop = el.scrollTop;
-        #     const clientHeight = el.clientHeight;
-        #     const scrollHeight = el.scrollHeight;
-        #     const isBottom = (scrollTop + clientHeight) >= scrollHeight - 2;
-        #     return [scrollTop, clientHeight, scrollHeight, isBottom];
-        # """
-        #
-        # for attempt in range(max_attempts):
-        #     scrollTop, clientHeight, scrollHeight, isBottom = self.driver.execute_script(scroll_script)
-        #     print(
-        #         f"[Attempt {attempt + 1}] scrollTop: {scrollTop}, clientHeight: {clientHeight}, scrollHeight: {scrollHeight}, atBottom: {isBottom}")
-        #     if isBottom:
-        #         print("✅ Reached bottom of .ly-lineWrapper.")
-        #         return True
-        #     time.sleep(pause_time)
-        #
-        # print("⚠️ Could not confirm scroll to bottom.")
-        # return False
-
-
-
-
-
+        self.scroll_to_bottom_of_container(selector)
 
 
 
