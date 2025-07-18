@@ -150,12 +150,22 @@ class BrowserUtility:
         """Return a list of visible module names from sidebar."""
         return [el.text.strip() for el in elements if el.is_displayed() and el.text.strip()]
 
-    def is_element_present(self, locator,timeout=2):
+    def is_element_present(self, locator):
         try:
-            WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located(locator))
+            self.wait.until(EC.presence_of_element_located(locator))
             return True
         except TimeoutException:
             return False
+
+    def to_open_iframe_cors_in_another_tab(self, iframeLocator):
+        time.sleep(7)
+        iframe = self.driver.find_element(*iframeLocator)
+        iframe_url = iframe.get_attribute("src")
+        time.sleep(10)
+        self.driver.execute_script("window.open('');")
+        self.driver.switch_to.window(self.driver.window_handles[1])  # Switch to new tab
+        time.sleep(2)
+        self.driver.get(iframe_url)
 
 
 

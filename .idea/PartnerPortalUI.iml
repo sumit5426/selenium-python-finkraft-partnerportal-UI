@@ -10,5 +10,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9 (PartnerPortalUI)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="PythonPratice" />
+    <orderEntry type="module" module-name="PythonProject" />
   </component>
 </module>

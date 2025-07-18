@@ -1,12 +1,13 @@
 import time
 
-from selenium.common import ElementClickInterceptedException
+from selenium.common import ElementClickInterceptedException, ElementNotInteractableException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 from conftest import driver
+from pages.credentials_page import CredentialsPage
 from utils.browser_utility import BrowserUtility
 from utils.logger import get_logger
 logger = get_logger(__name__)
@@ -25,7 +26,7 @@ class DashBoardPage(BrowserUtility):
     SET_VIEW_TITLE_LOCATOR = (By.CSS_SELECTOR, "#setViewTitle")
     total_trans = (By.XPATH, '(//div[@refelname="dArea"]//div[@zdbname="datacell"]//span[@zdbname="dataspan"])[2]')
     checkbox = (By.XPATH, '(//li[contains(@class, "zdropdownlist__item")]//input[@type="checkbox"])[2]')
-    ok_button = (By.XPATH, '//button[@aria-label="OK"]')
+    OK_BUTTON_LOCATOR = (By.XPATH, '//button[@aria-label="OK"]')
     checkbox_final = (By.XPATH,
                       "(//li[contains(@class, 'zdropdownlist__item') and contains(@class, 'is-selected')]//div[contains(@class, 'zdropdownlist__checkbox')])[1]")
     checkbox_final2 = (By.XPATH,
@@ -33,6 +34,9 @@ class DashBoardPage(BrowserUtility):
     ALL_DROPDOWNS = (By.XPATH, "//div[@class='ZR-DashboardUFContainer']//div[@elname='filterHead']")
     CUSTOM_OPTIONS = (By.XPATH, '//span[@class="zdropdownlist__text"]')
     CALENDAR_LOCATOR=(By.XPATH, '//input[contains(@class,"mcLoaded")]')
+    RESET_BUTTON_LOCATOR=(By.XPATH,"//div[@class='dFilterHolder']//div[@class='vmfResetButton']")
+    SUB_SUB_MODULE_LOCATOR=(By.XPATH,'//div[@elname="tabHeaderDivInput"]')
+    CREDENTIALS_MODULE_LOCATOR=(By.XPATH,"//p[normalize-space()='Credentials']")
 
     WIDGET_LOCATORS = {
         "logo": {
@@ -139,38 +143,83 @@ class DashBoardPage(BrowserUtility):
         self.switch_to_default_content()
         print("[switch_to_default] Switched back to main content.")
 
-
     def validate_all_dropdowns_have_values(self):
-        time.sleep(10)
+        time.sleep(5)  # Optional wait
         result = []
-        self.switch_to_iframe(self.IFRAME_LOCATOR)
-        dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
-        print(dropdowns)
-        for index, dropdown in enumerate(dropdowns):
-            has_value = False
+        top_modules = self.driver.find_elements(*self.TOP_SUB_MODULE_LOCATOR)
+        print("Top modules found:", len(top_modules))
+        for module_index, module in enumerate(top_modules):
             try:
-                self.scroll_into_view(dropdown)
-                dropdown.click()
-                options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
-                texts = [opt.text.strip() for opt in options if opt.text.strip()]
-                # Print the list of non-empty option texts
-                print(f"Dropdown has the following options: {texts}")
-                visible_options = [opt for opt in options if opt.is_displayed() and opt.text.strip()]
-                has_value = len(visible_options) > 0
-                dropdown.click()  #
+                self.switch_to_default_content()
+                module.click()
+                time.sleep(1)
+                self.switch_to_dashboard_iframe()
+                sub_sub_modules = self.driver.find_elements(*self.SUB_SUB_MODULE_LOCATOR)
+                print(f"Module {module_index + 1}: Sub-sub-modules found: {len(sub_sub_modules)}")
+
+                if len(sub_sub_modules) > 1:
+                    for sub_index, sub_module in enumerate(sub_sub_modules):
+                        try:
+                            sub_module.click()
+                            time.sleep(1)
+                            dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
+                            print(f"Sub-sub-module {sub_index + 1}: Dropdowns found: {len(dropdowns)}")
+                            for dropdown_index, dropdown in enumerate(dropdowns):
+                                try:
+                                    self.scroll_into_view(dropdown)
+                                    time.sleep(1)
+                                    class_attr = dropdown.get_attribute("class")
+                                    if "dataRangeHolder" in class_attr:
+                                        print(f"[ℹ️] Dropdown {dropdown_index + 1} is a calendar. Skipping.")
+                                        continue
+                                    dropdown.click()
+                                    options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
+                                    visible_options = [opt for opt in options if
+                                                       opt.is_displayed() and opt.text.strip()]
+                                    dropdown.click()  # Close the dropdown
+                                    result.append({
+                                        "module": module_index + 1,
+                                        "sub_sub_module": sub_index + 1,
+                                        "dropdown_index": dropdown_index,
+                                        "has_value": len(visible_options) > 0
+                                    })
+                                except Exception as e:
+                                    print(f"[Dropdown {dropdown_index}] Exception: {e}")
+                        except Exception as e:
+                            print(f"[Sub-sub-module {sub_index}] Exception: {e}")
+                else:
+                    # No sub-sub-module, directly validate dropdowns
+                    dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
+                    print(f"No sub-sub-modules: Dropdowns found: {len(dropdowns)}")
+
+                    for dropdown_index, dropdown in enumerate(dropdowns):
+                        try:
+                            self.scroll_into_view(dropdown)
+                            class_attr = dropdown.get_attribute("class")
+                            if "dataRangeHolder" in class_attr:
+                                print(f"[ℹ️] Dropdown {dropdown_index + 1} is a calendar. Skipping.")
+                                continue
+                            dropdown.click()
+                            options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
+                            visible_options = [opt for opt in options if opt.is_displayed() and opt.text.strip()]
+                            dropdown.click()  # Close the dropdown
+                            result.append({
+                                "module": module_index + 1,
+                                "dropdown_index": dropdown_index,
+                                "has_value": len(visible_options) > 0
+                            })
+                        except Exception as e:
+                            print(f"[Dropdown {dropdown_index}] Exception: {e}")
+                    self.switch_to_default_content()
             except Exception as e:
-                print(f"[Dropdown {index}] Exception: {e}")
-            result.append({
-                "dropdown_index": index,
-                "has_value": has_value
-            })
-        self.switch_to_default_content()
+                print(f"[Module {module_index + 1}] Exception: {e}")
+
         print(result)
         return result
 
-
     def validate_all_dropdowns_functionality(self):
-        self.switch_to_iframe(self.IFRAME_LOCATOR)
+        # self.switch_to_iframe(self.IFRAME_LOCATOR)
+        self.to_open_iframe_cors_in_another_tab(self.IFRAME_LOCATOR)
         self.driver.execute_script("document.querySelector('.scrollFreeze')?.remove();")
         print("[validate_all_dropdowns_have_values]")
         dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
@@ -180,6 +229,7 @@ class DashBoardPage(BrowserUtility):
             return
         unchanged_dropdowns = []
         error_dropdowns = []
+        changed_dropdowns = []
         time.sleep(5)
         for index, dropdown in enumerate(dropdowns):
             try:
@@ -187,8 +237,13 @@ class DashBoardPage(BrowserUtility):
                 self.scroll_into_view(dropdown)
                 self.driver.execute_script("document.querySelector('#ZRSTipPointer')?.remove();")
                 time.sleep(2)
+                class_attr = dropdown.get_attribute("class")
+                print(f"dropdown class attribute: {class_attr}")
+                if "dataRangeHolder" in class_attr:
+                    print(f"[ℹ️] Dropdown {index + 1} is a calendar. Skipping.")
+                    continue
                 dropdown.click()
-                # print(f"Dropdown {index + 1} clicked")
+                print(f"Dropdown {index + 1} clicked")
                 # if self.is_element_present(self.CALENDAR_LOCATOR):
                 #     print(f"[ℹ️] Dropdown {index + 1} is a calendar. Skipping.")
                 #     continue
@@ -205,7 +260,7 @@ class DashBoardPage(BrowserUtility):
                     ok_clicked = False
                     try:
                         time.sleep(1)
-                        ok_button_elem = self.visible_element(self.ok_button)
+                        ok_button_elem = self.visible_element(self.OK_BUTTON_LOCATOR)
                         if ok_button_elem:
                             classes = ok_button_elem.get_attribute("class")
                             is_disabled_attr = ok_button_elem.get_attribute("disabled")
@@ -236,7 +291,7 @@ class DashBoardPage(BrowserUtility):
                         print(f"Clicked third option (index 2) in dropdown {index + 1} (from exception handler or disabled OK)")
                         try:
                             time.sleep(1)
-                            ok_button_elem = self.visible_element(self.ok_button)
+                            ok_button_elem = self.visible_element(self.OK_BUTTON_LOCATOR)
                             if ok_button_elem:
                                 classes = ok_button_elem.get_attribute("class")
                                 is_disabled_attr = ok_button_elem.get_attribute("disabled")
@@ -259,12 +314,14 @@ class DashBoardPage(BrowserUtility):
                     elif not ok_clicked:
                         print(f"[⚠️] No third option to try in dropdown {index + 1}")
 
-                    self.wait_for_value_change(before_value, self.total_trans)
+                    time.sleep(1)
                     after_value = self.visible_text(self.total_trans)
                     print(f"After Value for dropdown {index + 1}: {after_value}")
 
                     if before_value != after_value:
                         print(f"[✅] Value changed as expected for dropdown {index + 1}")
+                        changed_dropdowns.append(f"Dropdown {index + 1}")
+
                     else:
                         # options = self.wait_for_all_elements(self.CUSTOM_OPTIONS)
                         print(f"[⚠️] Value not changed as expected for dropdown , trying for more one time   {index + 1}")
@@ -276,12 +333,36 @@ class DashBoardPage(BrowserUtility):
                         self.scroll_into_view(third_option)
                         self.driver.execute_script("document.querySelector('#ZRSTipPointer')?.remove();")
                         third_option.click()
-                        self.visible_element(self.ok_button).click()
-                        self.wait_for_value_change(after_value, self.total_trans)
+                        second_option.click()
+                        self.visible_element(self.OK_BUTTON_LOCATOR)
+                        ok_button_elem=self.driver.find_element(*self.OK_BUTTON_LOCATOR)
+                        if ok_button_elem.is_enabled():
+                            ok_button_elem.click()
+                            print(f"clicked on button after clicking third option (confirmed enabled)")
                         after_value_2 = self.visible_text(self.total_trans)
-                        if after_value_2 == after_value:
-                            print(f"[❌] Value not changed as expected for dropdown after retrying for dropdown {index + 1}")
-                            unchanged_dropdowns.append(f"Dropdown {index + 1}")
+                        if after_value_2 == before_value:
+                            print(
+                                f"[⚠️] Value still unchanged after second attempt — trying Reset button for dropdown {index + 1}")
+
+                            try:
+                                reset_button = self.visible_element(*self.RESET_BUTTON_LOCATOR)
+                                self.scroll_into_view(reset_button)
+                                reset_button.click()
+                                print(f"[🔄] Clicked Reset button for dropdown {index + 1}")
+                                self.wait_for_value_change(after_value_2, self.total_trans)
+                                after_value_3 = self.visible_text(self.total_trans)
+                                print(f"After Reset Value for dropdown {index + 1}: {after_value_3}")
+
+                                if after_value_3 == after_value_2:
+                                    print(f"[❌] Even after Reset, value not changed for dropdown {index + 1}")
+                                    unchanged_dropdowns.append(f"Dropdown {index + 1}")
+                                else:
+                                    print(f"[✅] Value changed after Reset for dropdown {index + 1}")
+                                    changed_dropdowns.append(f"Dropdown {index + 1} (after Reset)")
+
+                            except Exception as e:
+                                print(f"[❌] Failed to click Reset for dropdown {index + 1}: {e}")
+                                unchanged_dropdowns.append(f"Dropdown {index + 1} - Reset failed")
 
                 else:
                     print(f"[ℹ️] Skipping dropdown {index + 1} (only or two option)")
@@ -289,19 +370,16 @@ class DashBoardPage(BrowserUtility):
             except Exception as e:
                 print(f"[❌] Error processing dropdown {index + 1}: {str(e)}")
                 error_dropdowns.append(f"Dropdown {index + 1} - {str(e)}")
-        return unchanged_dropdowns, error_dropdowns
+        return unchanged_dropdowns, error_dropdowns, changed_dropdowns
 
     def find_vertical_scrollable_elements(self,selector=".ly-lineWrapper"):
-        time.sleep(7)
-        iframe = self.driver.find_element(*self.IFRAME_LOCATOR)
-        iframe_url=iframe.get_attribute("src")
-        time.sleep(10)
-        self.driver.execute_script("window.open('');")
-        self.driver.switch_to.window(self.driver.window_handles[1])  # Switch to new tab
-        time.sleep(2)
-        self.driver.get(iframe_url)
+        self.to_open_iframe_cors_in_another_tab(self.IFRAME_LOCATOR)
         self.scroll_to_bottom_of_container(selector)
 
+    def go_to_credentials(self):
+        self.click(self.CREDENTIALS_MODULE_LOCATOR)
+        credentials_page=CredentialsPage(self.driver)
+        return credentials_page
 
 
 
