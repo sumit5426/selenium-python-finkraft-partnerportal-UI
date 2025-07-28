@@ -1,6 +1,0 @@
-module name :['Dashboard - Airline', 'Dashboard - Hotel']
-2025-07-11 17:28:36 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
-('xpath', '(//span[@class="ant-avatar-string"])[1]')
-[visible_element] Element with locator ('xpath', '(//span[@class="ant-avatar-string"])[1]') not visible after 10 seconds.
-2025-07-11 17:28:47 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
-actual module[]

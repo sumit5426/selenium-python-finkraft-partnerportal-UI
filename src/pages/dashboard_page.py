@@ -8,6 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from conftest import driver
 from pages.credentials_page import CredentialsPage
+from pages.flight_page import FlightPage
 from utils.browser_utility import BrowserUtility
 from utils.logger import get_logger
 logger = get_logger(__name__)
@@ -37,6 +38,8 @@ class DashBoardPage(BrowserUtility):
     RESET_BUTTON_LOCATOR=(By.XPATH,"//div[@class='dFilterHolder']//div[@class='vmfResetButton']")
     SUB_SUB_MODULE_LOCATOR=(By.XPATH,'//div[@elname="tabHeaderDivInput"]')
     CREDENTIALS_MODULE_LOCATOR=(By.XPATH,"//p[normalize-space()='Credentials']")
+    FLIGHT_MODULE_LOCATOR=(By.XPATH,"//p[normalize-space()='Flight']")
+
 
     WIDGET_LOCATORS = {
         "logo": {
@@ -380,6 +383,11 @@ class DashBoardPage(BrowserUtility):
         self.click(self.CREDENTIALS_MODULE_LOCATOR)
         credentials_page=CredentialsPage(self.driver)
         return credentials_page
+
+    def go_to_flight_page(self):
+        self.click(self.FLIGHT_MODULE_LOCATOR)
+        flight_page=FlightPage(self.driver)
+        return flight_page
 
 
 

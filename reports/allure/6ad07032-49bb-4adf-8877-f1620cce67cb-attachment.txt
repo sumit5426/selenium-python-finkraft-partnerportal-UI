@@ -1,6 +1,0 @@
-2025-07-11 17:29:55 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
-('xpath', '(//span[@class="ant-avatar-string"])[1]')
-2025-07-11 17:29:59 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
-[validate_all_dropdowns_have_values]
-Found 0 dropdowns
-ℹ️ No dropdowns found on this portal — skipping dropdown validation.

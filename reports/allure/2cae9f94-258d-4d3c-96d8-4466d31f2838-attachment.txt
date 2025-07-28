@@ -1,1 +1,0 @@
-2025-07-11 17:31:46 | INFO     | test_login.py:test_login_logout:40 - tests.test_login - Testing login and logout

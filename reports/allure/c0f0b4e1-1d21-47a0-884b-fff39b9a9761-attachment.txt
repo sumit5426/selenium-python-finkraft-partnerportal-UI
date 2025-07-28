@@ -1,6 +1,0 @@
-2025-07-11 17:30:20 | INFO     | login_page.py:login:27 - pages.login_page - Logging in with user: sumit@kgrp.in
-('xpath', '(//span[@class="ant-avatar-string"])[1]')
-[visible_element] Element with locator ('xpath', '(//span[@class="ant-avatar-string"])[1]') not visible after 10 seconds.
-2025-07-11 17:30:31 | INFO     | login_page.py:login:33 - pages.login_page - Logged in with user: sumit@kgrp.in
-[Attempt 1] scrollTop: 1478.5, clientHeight: 672, scrollHeight: 2151, atBottom: True
-✅ Reached bottom of .ly-lineWrapper.

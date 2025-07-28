@@ -1,2 +1,0 @@
-2025-07-03 11:29:49 | INFO     | test_login.py:test_login_empty_username:24 - tests.test_login - Testing login with empty fields
-2025-07-03 11:29:49 | INFO     | login_page.py:login_empty_username:47 - pages.login_page - Logging in with user: 

@@ -43,6 +43,11 @@ class LoginPage(BrowserUtility):
 
         dashboard_page=DashBoardPage(self.driver)
         return dashboard_page
+    def page_title(self):
+        return self.driver.title
+
+    def page_url(self):
+        return self.driver.current_url
 
     def login_logout(self, username, password):
         self.enter_text(self.EMAIL_TEXTBOX, username)

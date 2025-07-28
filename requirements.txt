@@ -1,12 +1,38 @@
+# Core Testing Framework
 selenium~=4.32.0
 pytest~=8.3.5
 pyyaml~=6.0.2
+
+# Reporting and Documentation
 allure-pytest
 allure-python-commons~=2.14.2
-pytest-rerunfailures
 pytest-html
 loguru~=0.7.2
+
+# Test Execution and Control
+pytest-rerunfailures
 pytest-xdist
 pytest-order
 pytest-dependency
+pytest-timeout~=2.3.0
+
+pytest-dependency
 python-dotenv
+# Code Coverage
+pytest-cov~=4.0.0
+coverage~=7.6.0
+
+# Advanced Reporting
+pytest-json-report~=1.5.0
+
+# Performance Testing
+pytest-benchmark~=4.0.0
+
+# Code Quality
+pylint~=3.0.0
+
+# Data Analysis and Processing
+pandas~=2.1.0
+
+# Multi-Environment Testing
+tox~=4.0.0

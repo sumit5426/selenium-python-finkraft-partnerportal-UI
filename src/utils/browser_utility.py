@@ -168,5 +168,15 @@ class BrowserUtility:
         self.driver.get(iframe_url)
 
 
+    def is_no_data_displayed(self,locator,timeout=1):
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located(locator)
+            )
+            return True
+        except TimeoutException:
+            return False
+
+
 
 

@@ -1,4 +1,6 @@
 import datetime
+import shutil
+
 from dotenv import load_dotenv
 import re
 import pytest
@@ -102,23 +104,43 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_sessionstart(session):
-    allure_dir = "reports/allure"
-    os.makedirs(allure_dir, exist_ok=True)
+    results_dir = "reports/allure-results"
+    report_history_dir = "reports/allure-report/history"
+    results_history_dir = os.path.join(results_dir, "history")
 
-    with open(os.path.join(allure_dir, "environment.properties"), "w") as f:
+    # Clean results dir, but do NOT touch report_history_dir
+    if os.path.exists(results_dir):
+        shutil.rmtree(results_dir)
+    os.makedirs(results_dir, exist_ok=True)
+
+    # Copy history from previous report, if it exists
+    if os.path.exists(report_history_dir):
+        shutil.copytree(report_history_dir, results_history_dir, dirs_exist_ok=True)
+
+    build_name = datetime.datetime.now().strftime("Build-%Y-%m-%d-%H%M%S")
+
+    # Write environment.properties to results for environment tab
+    with open(os.path.join(results_dir, "environment.properties"), "w") as f:
         f.write("OS=macOS\nBrowser=Chrome\nTestEnv=QA\n")
 
-    with open(os.path.join(allure_dir, "executor.json"), "w") as f:
+    # Add executor metadata (optional, supports Allure's "Executor" tab)
+    with open(os.path.join(results_dir, "executor.json"), "w") as f:
         json.dump({
             "name": "Manual Execution",
             "type": "local",
-            "buildName": "Build-2025-07-04",
+            "buildName": build_name,
             "reportName": "Allure Pytest Report"
         }, f, indent=2)
 
-    with open(os.path.join(allure_dir, "categories.json"), "w") as f:
+    # Add defect categories (optional, improves Allure analytics)
+    with open(os.path.join(results_dir, "categories.json"), "w") as f:
         json.dump([
             {"name": "Product defects", "matchedStatuses": ["failed"]},
             {"name": "Test defects", "matchedStatuses": ["broken"]}
         ], f, indent=2)
+
+
+def pytest_runtest_setup(item):
+    for m in item.iter_markers():
+        allure.dynamic.tag(m.name)
 
