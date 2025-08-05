@@ -53,8 +53,8 @@ jobs:
             --html=reports/html/report.html \
             --self-contained-html
         env:
-          USER_ID: ${{ secrets.LOGIN_USERNAME }}
-          USER_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+          USER_ID: ${{ secrets.QA_YATRA_USERNAME }}
+          USER_PASSWORD: ${{ secrets.QA_YATRA_PASSWORD }}
 
       - name: Generate Allure report
         run: |
