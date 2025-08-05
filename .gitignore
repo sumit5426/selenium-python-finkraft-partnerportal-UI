@@ -9,3 +9,4 @@ htmlcov
 src/.coverage
 reports
 src/tests/reports
+.env
