@@ -12,6 +12,8 @@ env:
 
 jobs:
   test:
+    permissions:
+      contents: write
     name: CLI Pytest + Allure
     runs-on: ubuntu-latest
 
