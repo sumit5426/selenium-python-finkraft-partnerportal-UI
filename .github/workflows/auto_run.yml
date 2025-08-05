@@ -39,7 +39,12 @@ jobs:
           pip install allure-pytest
 
       - name: Install Allure CLI
-        uses: simple-elf/allure-installation-action@v1
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+          tar -xzf allure-2.27.0.tgz
+          sudo mv allure-2.27.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+          allure --version
 
       - name: Run pytest with CLI args & Allure output
         run: |
