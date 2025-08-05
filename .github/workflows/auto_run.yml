@@ -38,10 +38,8 @@ jobs:
           pip install -r requirements.txt
           pip install allure-pytest
 
-      - name: Install Allure commandline
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y allure
+      - name: Install Allure CLI
+        uses: simple-elf/allure-installation-action@v1.3
 
       - name: Run pytest with CLI args & Allure output
         run: |
@@ -49,8 +47,7 @@ jobs:
             --client=MMT \
             --workspace="Kotak securities" \
             --headless=true \
-            --alluredir=reports/allure-results \
-            --html=reports/html/report.html \
+            --maxfail=1 \
             --self-contained-html
         env:
           QA_YATRA_USERNAME: ${{ secrets.QA_YATRA_USERNAME }}
