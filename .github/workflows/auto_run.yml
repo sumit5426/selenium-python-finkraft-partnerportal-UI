@@ -39,7 +39,7 @@ jobs:
           pip install allure-pytest
 
       - name: Install Allure CLI
-        uses: simple-elf/allure-installation-action@v1.3
+        uses: simple-elf/allure-installation-action@v1.1
 
       - name: Run pytest with CLI args & Allure output
         run: |
