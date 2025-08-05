@@ -164,7 +164,7 @@ class DashBoardPage(BrowserUtility):
                     for sub_index, sub_module in enumerate(sub_sub_modules):
                         try:
                             sub_module.click()
-                            time.sleep(1)
+                            time.sleep(2)
                             dropdowns = self.driver.find_elements(*self.ALL_DROPDOWNS)
                             print(f"Sub-sub-module {sub_index + 1}: Dropdowns found: {len(dropdowns)}")
                             for dropdown_index, dropdown in enumerate(dropdowns):

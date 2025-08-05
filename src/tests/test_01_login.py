@@ -21,7 +21,7 @@ class TestLogin:
         logger.info("Testing login with valid credentials")
         login_page = LoginPage(driver)
         login_page.login(config["username"], config["password"])
-        if "dashboard" not in login_page.page_title():
+        if "dashboard" not in login_page.page_url():
             logger.error("Login failed – 'dashboard' not found in page title")
             pytest.exit("Login failed! Stopping test execution.")
 

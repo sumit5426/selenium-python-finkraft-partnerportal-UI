@@ -5,6 +5,7 @@ src/tests/reports/screenshots/
 reports/allure/
 src/tests/reports/allure/
 reports/screenshots/
-.benchmarks
 htmlcov
 src/.coverage
+reports
+src/tests/reports

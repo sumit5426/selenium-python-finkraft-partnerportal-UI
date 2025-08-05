@@ -11,6 +11,9 @@ class BrowserUtility:
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
 
+    TABLE_HEADING_LABEL_LOCATOR=(By.XPATH,'//span[@ref="eText" and @class="ag-header-cell-text"]')
+
+
     def click(self, locator):
         try:
             element = self.wait.until(EC.element_to_be_clickable(locator))
@@ -25,6 +28,10 @@ class BrowserUtility:
 
     def enter_text(self, locator, text):
         self.wait.until(EC.visibility_of_element_located(locator)).send_keys(text)
+        return self
+
+    def enter_text_element(self, element, text):
+        self.wait.until(EC.visibility_of(element)).send_keys(text)
         return self
 
     def click_and_enter(self, locator, text):
@@ -176,6 +183,42 @@ class BrowserUtility:
             return True
         except TimeoutException:
             return False
+
+
+    def ag_table_header_text(self,locator):
+        headings = []
+        seen = set()
+        # Get the scrollable container (usually a div with overflow-x: auto)
+        scroll_container = self.driver.find_element(*locator)  # Adjust selector as needed
+        # Scroll to the far left
+        self.driver.execute_script("arguments[0].scrollLeft = 0;", scroll_container)
+        last_scroll = -1
+        while True:
+            # Collect visible headings
+            elements = self.wait_for_all_elements(self.TABLE_HEADING_LABEL_LOCATOR)
+            for el in elements:
+                text = el.text.strip()
+                if text and text not in seen:
+                    headings.append(text)
+                    seen.add(text)
+            # Scroll right by a chunk
+            current_scroll = self.driver.execute_script("return arguments[0].scrollLeft;", scroll_container)
+            max_scroll = self.driver.execute_script("return arguments[0].scrollWidth - arguments[0].clientWidth;",
+                                                    scroll_container)
+            print(f"Scrolling... current: {current_scroll}, max: {max_scroll}")
+            if current_scroll == max_scroll or current_scroll == last_scroll:
+                print("headheadings:" + str(headings))
+                break
+            self.driver.execute_script("arguments[0].scrollLeft += 440;", scroll_container)
+            last_scroll = current_scroll
+        return list(headings)
+
+    def clear_text(self,locator,index):
+        clear_elements =self.wait_for_all_elements(locator)
+        print(f"length {len(clear_elements)}")
+        for el in clear_elements:
+            print(index)
+            el.clear()
 
 
 

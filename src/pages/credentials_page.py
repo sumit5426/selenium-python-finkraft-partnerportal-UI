@@ -33,9 +33,6 @@ class CredentialsPage(BrowserUtility):
     NO_DATA_TEXT_LOCATOR=(By.XPATH,'//div[@class="ant-empty-description"]')
 
 
-
-
-
     def click_take_action_button(self):
         print("click_take_action_button")
         options=self.wait_for_all_elements(self.TOP_MODULE_CRED_BUTTON_LOCATOR)
