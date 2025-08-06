@@ -54,7 +54,6 @@ jobs:
             --client=MMT \
             --workspace="Kotak securities" \
             --headless=true \
-            --maxfail=1 \
             --self-contained-html
         env:
           QA_YATRA_USERNAME: ${{ secrets.QA_YATRA_USERNAME }}
