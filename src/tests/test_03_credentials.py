@@ -1,6 +1,18 @@
 import allure
 import pytest
 from pages.login_page import LoginPage
+import re
+
+
+def parse_inr_string(s):
+    s = s.replace(',', '').replace('₹', '').strip()
+    if 'Cr' in s:
+        val = float(re.search(r'([0-9.]+)', s).group(1)) * 100
+    elif 'L' in s:
+        val = float(re.search(r'([0-9.]+)', s).group(1))
+    else:
+        val = float(re.search(r'([0-9.]+)', s).group(1))
+    return val
 
 
 class TestCredentials:
@@ -166,9 +178,27 @@ class TestCredentials:
         assert new_order != credentials_page.initial_header_order, \
             "Header order did not change after drag-and-drop"
 
+    @allure.title("Validate risk amount calculations for Airline & SSR")
+    def test_risk_metrics_display_and_calculation(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard_page = login_page.login(config["username"], config["password"])
+        credentials_page = dashboard_page.go_to_credentials()
+        airline_risk = credentials_page.get_card_risk_metric("Airline Credential")
+        ssr_risk = credentials_page.get_card_risk_metric("SSR Credential")
+        assert parse_inr_string(airline_risk) > 0 and "₹" in airline_risk
+        assert parse_inr_string(ssr_risk) > 0 and "₹" in ssr_risk
 
-
-
+    @pytest.mark.parametrize("module", ["gst", "airline", "email"])
+    @allure.title("Verify that search bar reduces table results (generic)")
+    def test_search_bar_filters_table(self, driver, config,module):
+        login_page = LoginPage(driver)
+        dashboard_page = login_page.login(config["username"], config["password"])
+        credentials_page = dashboard_page.go_to_credentials()
+        credentials_page.select_module(module)
+        initial_size = credentials_page.get_table_row_count()
+        credentials_page.enter_in_search_bar()
+        filtered_size = credentials_page.get_table_row_count()
+        assert filtered_size <= initial_size
 
 
 

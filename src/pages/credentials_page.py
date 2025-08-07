@@ -31,6 +31,11 @@ class CredentialsPage(BrowserUtility):
     CHECKBOX_LABELS_LOCATOR = (By.XPATH, '//span[@class="ag-column-select-column-label"]')
     AG_GRID_SCROLL_CONTAINER_LOCATOR=(By.CSS_SELECTOR,".ag-header-viewport")
     NO_DATA_TEXT_LOCATOR=(By.XPATH,'//div[@class="ant-empty-description"]')
+    AMOUNT_AT_RISK_AIRLINE_LOCATOR = (By.XPATH, '(//strong[@class="amountNum"])[2]')
+    AMOUNT_AT_RISK_SSR_LOCATOR = (By.XPATH, '(//strong[@class="amountNum"])[3]')
+    SEARCH_FILTER_LOCATOR=(By.XPATH, '//input[contains(@class, "css-cfjgob")]')
+    TABLE_ROW_COUNT_LOCATOR=(By.CSS_SELECTOR,"div.ag-row:not(.ag-row-floating):not(.ag-hidden)")
+    NO_DATA_LOCATOR=(By.CSS_SELECTOR,".ag-overlay-no-rows-center")
 
 
     def click_take_action_button(self):
@@ -263,6 +268,36 @@ class CredentialsPage(BrowserUtility):
 
     def is_no_data_displayed_in_cred_module(self):
         self.is_no_data_displayed(self.NO_DATA_TEXT_LOCATOR)
+
+    def get_card_risk_metric(self, card_name):
+        locator_map = {
+            "Airline Credential": self.AMOUNT_AT_RISK_AIRLINE_LOCATOR,
+            "SSR Credential": self.AMOUNT_AT_RISK_SSR_LOCATOR,
+        }
+        locator = locator_map.get(card_name)
+        if not locator:
+            raise ValueError(f"Unknown card: {card_name}")
+        return self.visible_text(locator)
+
+    def enter_in_search_bar(self):
+        search = self.visible_element(self.SEARCH_FILTER_LOCATOR, timeout=5)
+        search.clear()
+        search.send_keys("airOne")
+
+    def get_table_row_count(self):
+        rows=self.wait_for_all_elements(self.TABLE_ROW_COUNT_LOCATOR)
+        if not rows:
+            try:
+                no_data_msg = self.visible_element(self.NO_DATA_LOCATOR)
+                if no_data_msg.is_displayed():
+                    return 0
+            except Exception:
+                pass
+            return 0
+        else:
+            return len([row for row in rows if row.is_displayed()])
+
+
 
 
 

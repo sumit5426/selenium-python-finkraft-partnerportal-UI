@@ -1,6 +1,9 @@
+import random
+from operator import index
+
 import time
 from selenium.common import NoSuchElementException
-from selenium.webdriver import Keys
+from selenium.webdriver import Keys, ActionChains
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -232,6 +235,136 @@ class FlightPage(BrowserUtility):
         option_elements = options_container.find_elements(By.CSS_SELECTOR, ".ag-select-list-option")
         print(option_elements)
         print(len(option_elements))
+
+    def get_column_headers(self):
+        elements = self.wait_for_all_elements(self.TABLE_HEADING_LABEL_LOCATOR)
+        return elements[:-2]
+
+    def get_column_header_names(self):
+        return self.driver.execute_script("""
+                    return Array.from(document.querySelectorAll('.ag-header-cell'))
+                        .sort((a, b) => a.getAttribute('aria-colindex') - b.getAttribute('aria-colindex'))
+                        .map(el => el.innerText.trim());
+                """)
+
+    def drag_and_drop_column(self, source, target):
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", source)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", target)
+        actions = ActionChains(self.driver)
+        actions.click_and_hold(source).move_to_element(target).pause(0.5).release().perform()
+
+    def wait_for_header_order_change(self, old_order, timeout=10):
+        def _order_changed(driver):
+            # Always re-fetch the header names from the DOM
+            try:
+                new_order = self.get_column_header_names()
+                print("Checking new order:", new_order)
+                return new_order != old_order
+            except Exception as e:
+                print("Exception while checking header order:", e)
+                return False
+
+        WebDriverWait(self.driver, timeout).until(
+            _order_changed,
+            message=f"[TIMEOUT] Header order did not update in {timeout}s."
+        )
+
+
+    def drag_and_drop_two_random_headers(self, exclude_index=0):
+        headers = self.get_column_headers()
+        self.initial_header_order = self.get_column_header_names()
+        if len(headers) <= exclude_index + 3:
+            raise Exception("Not enough columns to perform drag-and-drop.")
+        indices = list(range(exclude_index + 1, len(headers)))
+        random.shuffle(indices)
+        src_idx, tgt_idx = indices[0], indices[1]
+        source_elem = headers[src_idx]
+        target_elem = headers[tgt_idx]
+        source_name = source_elem.text.strip()
+        target_name = target_elem.text.strip()
+        # Scroll before dragging
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", source_elem)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", target_elem)
+        print(f"Dragging '{source_name}' to '{target_name}'")
+        old_order = self.get_column_header_names()
+        print("Old order:", old_order)
+        # Perform drag
+        self.drag_and_drop_column(source_elem, target_elem)
+        self.wait_for_header_order_change(old_order)
+        new_order = self.get_column_header_names()
+        return source_name, target_name, new_order
+
+    # def sort_by_column_index(self, index, direction="asc"):
+    #     """
+    #     Click the header at position `index` (1-based) until it’s sorted as requested.
+    #     direction: "asc", "desc", or "none"
+    #     """
+    #     headers = self.wait_for_all_elements(self.TABLE_HEADING_LABEL_LOCATOR)
+    #     if index < 1 or index > len(headers):
+    #         raise IndexError(f"Header index {index} out of range (1–{len(headers)})")
+    #     header = headers[index - 1]
+    #
+    #     # What class name are we looking for?
+    #     sort_class_map = {
+    #         "asc": "ag-header-cell-sorted-asc",
+    #         "desc": "ag-header-cell-sorted-desc",
+    #         "none": "ag-header-cell-sorted-none"
+    #     }
+    #     expected_sort_class = sort_class_map[direction]
+    #     # Find the .ag-cell-label-container under the header
+    #     sort_container_xpath = f"(//div[contains(@class,'ag-header-cell')])[{index}]//div[contains(@class, 'ag-cell-label-container')]"
+    #     for _ in range(3):  # AG-Grid cycles: none -> asc -> desc -> none..., so 3 clicks max
+    #         self.driver.execute_script("arguments[0].click()", header)
+    #         try:
+    #             self.wait.until(
+    #                 lambda d: expected_sort_class in d.find_element(By.XPATH, sort_container_xpath).get_attribute(
+    #                     "class")
+    #             )
+    #             return self
+    #         except Exception:
+    #             continue
+    #     raise Exception(f"Failed to sort column at index {index} to {direction}")
+
+    # def get_column_values_by_index(self, index):
+    #     """
+    #     Return a list of values from the column at position `index` (1-based).
+    #     """
+    #     # Find every row’s cell in that column
+    #     cells = self.driver.find_elements(
+    #         By.XPATH,
+    #         f"//div[contains(@class,'ag-center-cols-container')]//div[@role='gridcell'][{index}]"
+    #     )
+    #     return [cell.text.strip() for cell in cells]
+
+    def sort_by_column_index(self, idx, direction):  # idx: 1-based
+        sort_class = f"ag-header-cell-sorted-{direction}"  # "ag-header-cell-sorted-asc" or "desc"
+        sort_header_xpath = f"(//div[contains(@class, 'ag-cell-label-container')])[{idx}]"
+        sort_label_xpath =  f"(//div[contains(@class, 'ag-header-cell-comp-wrapper')])[{idx}]//div[@role='presentation']"
+        header = self.driver.find_element(By.XPATH, sort_header_xpath)
+        clicks = 0
+        for _ in range(3):  # AG-Grid cycles: none -> asc -> desc -> none
+            header.click()
+            clicks += 1
+            # Defensive wait—refresh element after click
+            label = self.driver.find_element(By.XPATH, sort_label_xpath)
+            if sort_class in label.get_attribute("class"):
+                return clicks
+        raise Exception(f"Could not sort column {idx} to {direction}")
+
+    def get_column_values_by_index(self, col_idx):
+        # Always get new elements after sorts/filters
+        cell_xpath = f"//div[contains(@class,'ag-center-cols-container')]//div[@role='gridcell'][{col_idx}]"
+        # Use explicit wait to avoid race between sort completion & query
+        self.wait.until(
+            lambda d: len(d.find_elements(By.XPATH, cell_xpath)) > 0
+        )
+        # Now fetch cells anew
+        cells = self.driver.find_elements(By.XPATH, cell_xpath)
+        return [cell.text.strip() for cell in cells]
+
+
+
+
 
 
 

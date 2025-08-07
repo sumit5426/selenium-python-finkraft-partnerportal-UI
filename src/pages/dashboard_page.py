@@ -39,6 +39,8 @@ class DashBoardPage(BrowserUtility):
     SUB_SUB_MODULE_LOCATOR=(By.XPATH,'//div[@elname="tabHeaderDivInput"]')
     CREDENTIALS_MODULE_LOCATOR=(By.XPATH,"//p[normalize-space()='Credentials']")
     FLIGHT_MODULE_LOCATOR=(By.XPATH,"//p[normalize-space()='Flight']")
+    AMOUNT_AT_RISK_AIRLINE_LOCATOR=(By.XPATH,'(//strong[@class="amountNum"])[2]')
+    AMOUNT_AT_RISK_SSR_LOCATOR = (By.XPATH, '(//strong[@class="amountNum"])[3]')
 
 
     WIDGET_LOCATORS = {

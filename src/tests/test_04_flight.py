@@ -117,4 +117,42 @@ class TestFlights:
             flight_page.select_sub_filter()
             # flight_page.expand_toggle(toggle)
 
+    @pytest.mark.smoke
+    @pytest.mark.flaky()
+    def test_table_header_drag_and_drop(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard_page = login_page.login(config["username"], config["password"])
+        flight_page = dashboard_page.go_to_flight_page()
+        if not flight_page.has_table_headings():
+            pytest.skip(f"No table headings for module, so no drag and drop to test.")
+        source_name, target_name, new_order = flight_page.drag_and_drop_two_random_headers(exclude_index=0)
+        assert source_name in new_order and target_name in new_order, \
+            f"Expected {source_name} and {target_name} to be present after drag-and-drop."
+        assert new_order != flight_page.initial_header_order, \
+            "Header order did not change after drag-and-drop"
+
+    def test_sort_toggle_by_index(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        col_idx = 5
+
+        # Ascending
+        clicks_asc = flight_page.sort_by_column_index(col_idx, direction="asc")
+        time.sleep(0.5)
+        col_values = flight_page.get_column_values_by_index(col_idx)
+        assert col_values == sorted(col_values), f"Not sorted ascending: {col_values}"
+        assert clicks_asc == 1, f"Expected 1 click for asc, got {clicks_asc}"
+
+        # Descending
+        clicks_desc = flight_page.sort_by_column_index(col_idx, direction="desc")
+        time.sleep(0.5)
+        desc_values = flight_page.get_column_values_by_index(col_idx)
+        assert desc_values == sorted(desc_values, reverse=True), f"Not sorted descending: {desc_values}"
+        assert clicks_desc == 1, f"Expected 1 click for desc, got {clicks_desc}"
+
+        # None
+        clicks_none = flight_page.sort_by_column_index(col_idx, direction="none")
+        assert clicks_none == 1, f"Expected 1 click for none, got {clicks_none}"
+
 

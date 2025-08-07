@@ -5,6 +5,8 @@ from selenium.common import ElementClickInterceptedException, ElementNotInteract
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import re
+
 
 class BrowserUtility:
     def __init__(self, driver):
@@ -219,6 +221,7 @@ class BrowserUtility:
         for el in clear_elements:
             print(index)
             el.clear()
+
 
 
 
