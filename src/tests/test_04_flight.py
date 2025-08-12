@@ -100,7 +100,7 @@ class TestFlights:
 
     @allure.title("all filter functionality")
     @pytest.mark.smoke
-    def test_filters_in_tables(self, driver, config):
+    def test_all_filters_in_tables(self, driver, config):
         pytest.skip("all filter functionality not implemented")
         login_page = LoginPage(driver)
         dashboard = login_page.login(config["username"], config["password"])
@@ -117,6 +117,7 @@ class TestFlights:
             flight_page.select_sub_filter()
             # flight_page.expand_toggle(toggle)
 
+    @allure.title("Verifying drag and drop functionality between columns")
     @pytest.mark.smoke
     @pytest.mark.flaky()
     def test_table_header_drag_and_drop(self, driver, config):
@@ -131,28 +132,94 @@ class TestFlights:
         assert new_order != flight_page.initial_header_order, \
             "Header order did not change after drag-and-drop"
 
+    @allure.title("verifying columns sorting functionality")
+    @pytest.mark.smoke
     def test_sort_toggle_by_index(self, driver, config):
         login_page = LoginPage(driver)
         dashboard = login_page.login(config["username"], config["password"])
         flight_page = dashboard.go_to_flight_page()
-        col_idx = 5
+        for col_idx in [3, 4, 5]:
+            # Ascending
+            clicks_asc = flight_page.sort_by_column_index(col_idx, direction="asc")
+            time.sleep(0.5)
+            col_values = flight_page.get_column_values_by_index(col_idx)
+            assert col_values == sorted(col_values), f"[col {col_idx}] Not sorted ascending: {col_values}"
+            assert clicks_asc == 1, f"[col {col_idx}] Expected 1 click for asc, got {clicks_asc}"
+            # Descending
+            clicks_desc = flight_page.sort_by_column_index(col_idx, direction="desc")
+            time.sleep(0.5)
+            desc_values = flight_page.get_column_values_by_index(col_idx)
+            assert desc_values == sorted(desc_values,
+                                         reverse=True), f"[col {col_idx}] Not sorted descending: {desc_values}"
+            assert clicks_desc == 1, f"[col {col_idx}] Expected 1 click for desc, got {clicks_desc}"
+            # None
+            clicks_none = flight_page.sort_by_column_index(col_idx, direction="none")
+            assert clicks_none == 1, f"[col {col_idx}] Expected 1 click for none, got {clicks_none}"
 
-        # Ascending
-        clicks_asc = flight_page.sort_by_column_index(col_idx, direction="asc")
-        time.sleep(0.5)
-        col_values = flight_page.get_column_values_by_index(col_idx)
-        assert col_values == sorted(col_values), f"Not sorted ascending: {col_values}"
-        assert clicks_asc == 1, f"Expected 1 click for asc, got {clicks_asc}"
+    @allure.title("Verifying group by filter feature functionality")
+    @pytest.mark.smoke
+    def test_group_each_index_isolated(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        indices = [4,5]  # 1-based
+        for idx in indices:
+            # Actx
+            header_name = flight_page.drag_header_to_group_zone_by_index(idx)
+            # Assert: chip exists for that header (skip empty header names gracefully)
+            chip_texts = flight_page.get_grouped_chip_texts()
+            if header_name:
+                assert header_name in chip_texts, f"[idx {idx}] Chip for '{header_name}' not found. Chips: {chip_texts}"
+            else:
+                # If header has no text (icon column), assert at least one chip exists
+                assert len(chip_texts) >= 1, f"[idx {idx}] No grouping chip found."
+            # Assert: auto-group column present at left and groups visible
+            assert flight_page.is_auto_group_column_present_left(), f"[idx {idx}] Auto group column not detected."
+            if not flight_page.has_group_rows():
+                flight_page.expand_first_group_if_collapsed()
+                time.sleep(0.3)
+            assert flight_page.has_group_rows(), f"[idx {idx}] No group rows visible."
+            # Cleanup before next iteration
+            flight_page.clear_grouping()
 
-        # Descending
-        clicks_desc = flight_page.sort_by_column_index(col_idx, direction="desc")
-        time.sleep(0.5)
-        desc_values = flight_page.get_column_values_by_index(col_idx)
-        assert desc_values == sorted(desc_values, reverse=True), f"Not sorted descending: {desc_values}"
-        assert clicks_desc == 1, f"Expected 1 click for desc, got {clicks_desc}"
+    @allure.title("Verifying page views functionality")
+    @pytest.mark.smoke
+    def test_switch_from_default_view(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        selected_text, expected_text = flight_page.switch_to_different_view()
+        assert selected_text == expected_text, f"Selected '{selected_text}', expected '{expected_text}'"
 
-        # None
-        clicks_none = flight_page.sort_by_column_index(col_idx, direction="none")
-        assert clicks_none == 1, f"Expected 1 click for none, got {clicks_none}"
+    @allure.title("Verifying download invoice history list functionality")
+    @pytest.mark.smoke
+    def test_get_download_invoice_history_view(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        is_report_name_available=flight_page.get_download_history_downloads()
+        assert is_report_name_available,"report name not available"
+
+    @allure.title("Verifying upload invoice history list functionality")
+    @pytest.mark.smoke
+    def test_get_upload_invoice_history_view(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        is_report_name_available = flight_page.get_upload_history_downloads()
+        assert is_report_name_available, "report name not available"
+
+    @allure.title("Verifying report history list functionality")
+    @pytest.mark.smoke
+    def test_get_report_history_view(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        is_report_name_available = flight_page.get_report_history_downloads()
+        assert is_report_name_available, "report name not available"
+
+
+
+
 
 

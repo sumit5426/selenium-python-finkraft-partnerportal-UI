@@ -1,5 +1,6 @@
 import random
 from operator import index
+from typing import List
 
 import time
 from selenium.common import NoSuchElementException
@@ -30,6 +31,31 @@ class FlightPage(BrowserUtility):
     FILTER_INPUT = (By.XPATH, "//input[@aria-label='Filter Value']")
     SPIN_LOADER_LOCATOR = (By.XPATH,'//span[contains(@class, "ag-loading-icon")]')
     SUB_FILTER_LOCATOR=(By.XPATH,'//div[@ref="eFilterBody"]//div[@aria-label="Filtering operator"]')
+    DROP_WRAPPER_XPATH = "//div[contains(@class,'ag-column-drop-wrapper')]"
+    HEADER_CELL_BY_INDEX = "(//div[contains(@class,'ag-cell-label-container')])[{idx}]"
+    HEADER_TEXT_WITHIN_CELL='//span[@ref="eText" and @class="ag-header-cell-text"]'
+    CENTER_VIEWPORT = "//div[contains(@class,'ag-center-cols-viewport')]"
+    GROUP_FILTER_CANCEL_LOCATOR=(By.XPATH,"//span[contains(@class,'ag-column-drop-horizontal-cell-button') and @ref='eButton']//span[@unselectable='on']")
+    DEFAULT_VIEW_LOCATOR=(By.XPATH,"//div[@class='ant-select ant-select-sm ant-select-filled css-cfjgob ant-select-single ant-select-show-arrow']//div[@class='ant-select-selector']")
+    DROPDOWN_CONTAINER_LOCATOR=(By.XPATH,"//div[contains(@class,'ant-select-item-option-content') and not(contains(@class,'ant-select-dropdown-hidden'))]")
+    VIEW_TO_BE_SELECTED_LOCATOR=(By.XPATH,"(//div[contains(@class,'ant-select-item-option-content') and not(contains(@class,'ant-select-dropdown-hidden'))])[2]")
+    TEXT_TO_RETRIEVE_AFTER_VIEW_SELECTION_LOCATOR=(By.XPATH,"(//div[contains(@class,'ant-select')]//span[@class='ant-select-selection-item'])[1]")
+    ELLIPSIS_SVG_LOCATOR_1=(By.XPATH,"(//div[contains(@class,'HeaderRight')]//*[name()='svg' and @data-icon='ellipsis'])[1]")
+    ELLIPSIS_SVG_LOCATOR_2=(By.XPATH,"(//div[contains(@class,'HeaderRight')]//*[name()='svg' and @data-icon='ellipsis'])[3]")
+    ELLIPSIS_SVG_LOCATOR_3=(By.XPATH,"(//div[contains(@class,'HeaderRight')]//*[name()='svg' and @data-icon='ellipsis'])[2]")
+    DOWNLOAD_HISTORY_LOCATOR_1=(By.XPATH,"//span[contains(@class,'ant-dropdown') and normalize-space()='Download History']")
+    DOWNLOAD_HISTORY_LOCATOR_2=(By.XPATH,"//div[@class='ant-dropdown css-cfjgob ant-dropdown-placement-bottomRight']//span[@class='ant-dropdown-menu-title-content'][normalize-space()='Download History']")
+    DOWNLOAD_HISTORY_LOCATOR_3=(By.XPATH,"(//span[normalize-space()='Reports Export History'])[1]")
+    MODAL_BOX_LOCATOR=(By.XPATH,'//div[contains(@class,"ant-modal-content")]//div[normalize-space()="Bulk Download History"]')
+    RECORD_CONFIRMATION_LOCATOR=(By.XPATH,'(//div[@col-id="report_name"])[2]')
+    MODAL_CLOSE_BUTTON_LOCATOR=(By.XPATH,'(//span[contains(@class,"anticon-close")])[2]')
+    MODAL_MASK = (By.XPATH, "//div[contains(@class,'ant-modal-root')]//div[contains(@class,'ant-modal-mask') and not(contains(@class,'display: none'))]")
+    # Auto-group cues/classes can vary; we check any of these markers within first col cell
+    AUTO_GROUP_MARKERS_XPATH = (
+        "//*[contains(@class,'ag-group-expanded') or "
+        "contains(@class,'ag-group-contracted') or "
+        "contains(@class,'ag-group-value')]"
+    )
 
 
     def get_flight_ag_grid_table_headings(self):
@@ -294,48 +320,6 @@ class FlightPage(BrowserUtility):
         new_order = self.get_column_header_names()
         return source_name, target_name, new_order
 
-    # def sort_by_column_index(self, index, direction="asc"):
-    #     """
-    #     Click the header at position `index` (1-based) until it’s sorted as requested.
-    #     direction: "asc", "desc", or "none"
-    #     """
-    #     headers = self.wait_for_all_elements(self.TABLE_HEADING_LABEL_LOCATOR)
-    #     if index < 1 or index > len(headers):
-    #         raise IndexError(f"Header index {index} out of range (1–{len(headers)})")
-    #     header = headers[index - 1]
-    #
-    #     # What class name are we looking for?
-    #     sort_class_map = {
-    #         "asc": "ag-header-cell-sorted-asc",
-    #         "desc": "ag-header-cell-sorted-desc",
-    #         "none": "ag-header-cell-sorted-none"
-    #     }
-    #     expected_sort_class = sort_class_map[direction]
-    #     # Find the .ag-cell-label-container under the header
-    #     sort_container_xpath = f"(//div[contains(@class,'ag-header-cell')])[{index}]//div[contains(@class, 'ag-cell-label-container')]"
-    #     for _ in range(3):  # AG-Grid cycles: none -> asc -> desc -> none..., so 3 clicks max
-    #         self.driver.execute_script("arguments[0].click()", header)
-    #         try:
-    #             self.wait.until(
-    #                 lambda d: expected_sort_class in d.find_element(By.XPATH, sort_container_xpath).get_attribute(
-    #                     "class")
-    #             )
-    #             return self
-    #         except Exception:
-    #             continue
-    #     raise Exception(f"Failed to sort column at index {index} to {direction}")
-
-    # def get_column_values_by_index(self, index):
-    #     """
-    #     Return a list of values from the column at position `index` (1-based).
-    #     """
-    #     # Find every row’s cell in that column
-    #     cells = self.driver.find_elements(
-    #         By.XPATH,
-    #         f"//div[contains(@class,'ag-center-cols-container')]//div[@role='gridcell'][{index}]"
-    #     )
-    #     return [cell.text.strip() for cell in cells]
-
     def sort_by_column_index(self, idx, direction):  # idx: 1-based
         sort_class = f"ag-header-cell-sorted-{direction}"  # "ag-header-cell-sorted-asc" or "desc"
         sort_header_xpath = f"(//div[contains(@class, 'ag-cell-label-container')])[{idx}]"
@@ -361,6 +345,183 @@ class FlightPage(BrowserUtility):
         # Now fetch cells anew
         cells = self.driver.find_elements(By.XPATH, cell_xpath)
         return [cell.text.strip() for cell in cells]
+
+    def _wait_for_drop_zone(self):
+        return self.wait.until(EC.presence_of_element_located((By.XPATH, self.DROP_WRAPPER_XPATH)))
+
+    def _get_header_el_by_index(self, idx: int):
+        xpath = self.HEADER_CELL_BY_INDEX.format(idx=idx)
+        return self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+
+    def _scroll_header_into_view(self, header_el):
+        try:
+            self.driver.execute_script(
+                "arguments[0].scrollIntoView({block:'nearest', inline:'center'});",
+                header_el
+            )
+        except Exception:
+            pass
+
+    def _get_header_text_by_index(self, idx: int) -> str:
+        container_xpath = self.HEADER_CELL_BY_INDEX.format(idx=idx)
+        label_xpath = f"{container_xpath}{self.HEADER_TEXT_WITHIN_CELL}"
+        el = self.wait.until(EC.presence_of_element_located((By.XPATH, label_xpath)))
+        return (el.text or "").strip()
+
+    def get_group_chip_xpath_for_text(self, text: str) -> str:
+        return (
+            f"(//span[contains(@class,'ag-column-drop-horizontal-cell') and normalize-space()='{text}'])[2]"
+        )
+
+        # ---------- Public API ----------
+
+    def drag_header_to_group_zone_by_index(self, idx: int) -> str:
+        """
+        Drag a header (by 1-based index) into the group drop zone.
+        Returns the header text found at that index (can be empty if no label).
+        """
+        drop_zone = self._wait_for_drop_zone()
+        header = self._get_header_el_by_index(idx)
+        self._scroll_header_into_view(header)
+        header_text = self._get_header_text_by_index(idx)
+
+        actions = ActionChains(self.driver)
+        # Robust drag and drop sequence
+        actions.move_to_element(header).click_and_hold().pause(0.2) \
+            .move_to_element(drop_zone).pause(0.2).release().perform()
+
+        # Verify a chip appears. If header text is blank (icon columns), we fall back to any chip presence.
+        print(header_text)
+        if header_text:
+            chip_xpath = self.get_group_chip_xpath_for_text(header_text)
+            self.wait.until(EC.presence_of_element_located((By.XPATH, chip_xpath)))
+        else:
+            # Fallback: any chip appeared in drop wrapper
+            self.wait.until(EC.presence_of_element_located((
+                By.XPATH,
+                f"{self.DROP_WRAPPER_XPATH}//div[contains(@class,'ag-column-drop-cell')]"
+            )))
+        return header_text
+
+    def drag_headers_to_group_zone_by_indices(self, indices: List[int]) -> List[str]:
+        names = []
+        for idx in indices:
+            name = self.drag_header_to_group_zone_by_index(idx)
+            names.append(name)
+        return names
+
+    def get_grouped_chip_texts(self):
+        time.sleep(10)
+        elements = self.driver.find_elements(
+            By.XPATH,
+            "//span[contains(@class,'ag-column-drop-horizontal-cell')]"
+        )
+
+        chip_texts = self.driver.execute_script("""
+            return arguments[0].map(el => el.textContent.trim());
+        """, elements)
+        print(chip_texts)
+        return chip_texts
+
+    def is_auto_group_column_present_left(self) -> bool:
+        """
+        Detect the presence of the Auto Group column at the left (index 1)
+        by finding group markers inside first column cells.
+        """
+        # Find any row, first column cell, then look for group markers in it
+        time.sleep(5)
+        first_col_cells = self.driver.find_elements(
+            By.XPATH,
+            "//div[contains(@class,'ag-center-cols-container')]//div[@role='row']//div[@role='gridcell'][1]"
+        )
+        if first_col_cells:
+                return True
+        return False
+
+    def expand_first_group_if_collapsed(self):
+        """
+        Optional: Expand the first group if a collapsed icon is found to validate group rows existence.
+        """
+        collapsed_icons = self.driver.find_elements(
+            By.XPATH,
+            "//span[contains(@class,'ag-group-contracted')]"
+        )
+        if collapsed_icons:
+            try:
+                collapsed_icons[0].click()
+            except Exception:
+                pass
+
+    def has_group_rows(self) -> bool:
+        """
+        Check for group rows existence via common group row classes.
+        """
+        group_rows = self.driver.find_elements(
+            By.XPATH,
+            "//*[contains(@class,'ag-group-row') or contains(@class,'ag-row-group')]"
+        )
+        return len(group_rows) > 0
+
+    def clear_grouping(self):
+        """
+        Click 'x' on each chip in the drop zone (if present) to clear grouping.
+        """
+        btn=self.visible_element(self.GROUP_FILTER_CANCEL_LOCATOR)
+        try:
+            btn.click()
+        except Exception:
+            pass
+
+
+    def switch_to_different_view(self):
+        time.sleep(2)
+        self.visible_element(self.DEFAULT_VIEW_LOCATOR).click()
+        self.visible_element(self.DROPDOWN_CONTAINER_LOCATOR)
+        label_name_dropdown_to_be_selected=self.visible_text(self.VIEW_TO_BE_SELECTED_LOCATOR)
+        self.visible_element(self.VIEW_TO_BE_SELECTED_LOCATOR).click()
+        label_name_of_view = self.visible_text(self.TEXT_TO_RETRIEVE_AFTER_VIEW_SELECTION_LOCATOR)
+        return label_name_of_view,label_name_dropdown_to_be_selected
+
+    def get_download_history_downloads(self):
+        self.click(self.ELLIPSIS_SVG_LOCATOR_1)
+        self.click(self.DOWNLOAD_HISTORY_LOCATOR_1)
+        self.visible_element(self.MODAL_BOX_LOCATOR)
+        report_name=self.visible_text(self.RECORD_CONFIRMATION_LOCATOR)
+        self.driver.switch_to.active_element.send_keys(Keys.ESCAPE)
+        self.invisible_element(self.MODAL_BOX_LOCATOR)
+        if report_name:
+            return True
+        else:
+            return False
+
+    def get_upload_history_downloads(self):
+        self.click(self.ELLIPSIS_SVG_LOCATOR_2)
+        self.click(self.DOWNLOAD_HISTORY_LOCATOR_2)
+        self.visible_element(self.MODAL_BOX_LOCATOR)
+        report_name=self.visible_text(self.RECORD_CONFIRMATION_LOCATOR)
+        self.driver.switch_to.active_element.send_keys(Keys.ESCAPE)
+        self.invisible_element(self.MODAL_BOX_LOCATOR)
+        if report_name:
+            return True
+        else:
+            return False
+
+    def get_report_history_downloads(self):
+        self.click(self.ELLIPSIS_SVG_LOCATOR_3)
+        self.click(self.DOWNLOAD_HISTORY_LOCATOR_3)
+        self.visible_element(self.MODAL_BOX_LOCATOR)
+        report_name = self.visible_text(self.RECORD_CONFIRMATION_LOCATOR)
+        self.driver.switch_to.active_element.send_keys(Keys.ESCAPE)
+        self.invisible_element(self.MODAL_BOX_LOCATOR)
+        if report_name:
+            return True
+        else:
+            return False
+
+
+
+
+
 
 
 

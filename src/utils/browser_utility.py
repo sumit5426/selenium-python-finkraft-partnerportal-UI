@@ -58,6 +58,15 @@ class BrowserUtility:
             print(f"[visible_element] Element with locator {locator} not visible after {timeout or 10} seconds.")
             return None
 
+    def invisible_element(self, locator, timeout=None):
+        """Wait until the element is visible. Return the element if found, else None."""
+        try:
+            wait = self.wait if timeout is None else WebDriverWait(self.driver, timeout)
+            return wait.until(EC.invisibility_of_element_located(locator))
+        except TimeoutException:
+            print(f"[invisible_element] Element with locator {locator} not invisible after {timeout or 10} seconds.")
+            return None
+
     def visible_text(self, locator):
         """Check if an error message is visible within the given timeout."""
         try:
