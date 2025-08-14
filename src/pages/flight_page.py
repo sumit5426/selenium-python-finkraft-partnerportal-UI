@@ -10,7 +10,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 from utils.browser_utility import BrowserUtility
 
 
@@ -50,6 +49,13 @@ class FlightPage(BrowserUtility):
     RECORD_CONFIRMATION_LOCATOR=(By.XPATH,'(//div[@col-id="report_name"])[2]')
     MODAL_CLOSE_BUTTON_LOCATOR=(By.XPATH,'(//span[contains(@class,"anticon-close")])[2]')
     MODAL_MASK = (By.XPATH, "//div[contains(@class,'ant-modal-root')]//div[contains(@class,'ant-modal-mask') and not(contains(@class,'display: none'))]")
+    FIRST_ROW_OF_TABLE_LOCATOR=(By.XPATH,'//div[@row-index="0"]//div[contains(@class,"ag-cell")]')
+    TABLE_ROWS_LOCATOR=(By.XPATH, '//div[@role="row" and @row-index]')
+    DESELECT_ALL_COLUMNS_LOCATOR=(By.XPATH,"(//div[contains(@role,'presentation')])[81]")
+    HEADER_SELECTION_TEXTBOX_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-column-select')]//input[@aria-label='Filter Columns Input' and @type='text']")
+    FIRST_CHECKBOX_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-column-select')]//div[contains(@class,'ag-column-select-column')]//span[contains(@class,'ag-column-select-column-label')]")
+    CONTEXT_MENU_FOR_GROUPING_LOCATOR=(By.XPATH,"(//div[contains(@class,'ag-menu') or contains(@role,'menu')]//span[contains(@class,'ag-menu-option-text')])[2]")
+    FIRST_COLUMN_ROW_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-column-select')]//div[contains(@class,'ag-column-select-column')]")
     # Auto-group cues/classes can vary; we check any of these markers within first col cell
     AUTO_GROUP_MARKERS_XPATH = (
         "//*[contains(@class,'ag-group-expanded') or "
@@ -517,6 +523,82 @@ class FlightPage(BrowserUtility):
             return True
         else:
             return False
+
+
+
+    def validate_table_has_data(self):
+        """Comprehensive table data validation"""
+        try:
+            # Check if table has rows
+            all_rows = self.wait_for_all_elements(self.TABLE_ROWS_LOCATOR)
+            if not all_rows:
+                return False, "No data rows found in table"
+            # Check first row specifically
+            first_row_cells =self.wait_for_all_elements(self.FIRST_ROW_OF_TABLE_LOCATOR)
+            if not first_row_cells:
+                return False, "No cells found in first row"
+            # Validate cell content
+            non_empty_cells = 0
+            cell_data = {}
+
+            for cell in first_row_cells:
+                col_id = cell.get_attribute("col-id")
+                cell_text = cell.text.strip()
+
+                if cell_text and cell_text != "-" and cell_text != "":
+                    non_empty_cells += 1
+                    cell_data[col_id] = cell_text
+
+            if non_empty_cells < 3:
+                return False, f"Insufficient data: only {non_empty_cells} non-empty cells"
+
+            return True, {
+                "total_cells": len(first_row_cells),
+                "non_empty_cells": non_empty_cells,
+                "sample_data": dict(list(cell_data.items())[:3])  # First 3 entries
+            }
+
+        except Exception as e:
+            return False, f"Table validation error: {str(e)}"
+
+    def no_of_table_header_after_deselection(self):
+        time.sleep(2)
+        self.click(self.DESELECT_ALL_COLUMNS_LOCATOR)
+        no_of_header=len(self.driver.find_elements(*self.TABLE_HEADING_LABEL_LOCATOR))
+        if no_of_header <= 2:
+            return True
+        else:
+            return False
+
+
+    def enter_text_into_textbox_for_column_header_selection(self):
+        self.click(self.DESELECT_ALL_COLUMNS_LOCATOR)
+        self.enter_text(self.HEADER_SELECTION_TEXTBOX_LOCATOR,"amount")
+        # self.visible_element(self.FIRST_CHECKBOX_LOCATOR)
+        self.visible_element(self.FIRST_CHECKBOX_LOCATOR).click()
+        headers=self.wait_for_all_elements(self.TABLE_HEADING_LABEL_LOCATOR)
+        no_of_headers=len(headers)
+        if no_of_headers == 3:
+            return True
+        else:
+            return False
+
+    def aggregate_function_to_column(self):
+        column=self.visible_element(self.FIRST_COLUMN_ROW_LOCATOR)
+        time.sleep(1)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(column).context_click(column).perform()
+        time.sleep(5)
+        self.click(self.CONTEXT_MENU_FOR_GROUPING_LOCATOR)
+        time.sleep(10)
+
+
+
+
+
+
+
+
 
 
 

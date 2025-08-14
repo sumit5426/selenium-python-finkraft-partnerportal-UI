@@ -1,3 +1,5 @@
+import json
+
 import time
 
 import allure
@@ -182,6 +184,30 @@ class TestFlights:
             # Cleanup before next iteration
             flight_page.clear_grouping()
 
+    @allure.title("Verifying aggregate group filter feature functionality")
+    @pytest.mark.smoke
+    def test_group_each_index_aggregated(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        indices = [4, 5]  # 1-based
+        for idx in indices:
+            # Actx
+            header_name = flight_page.drag_header_to_group_zone_by_index(idx)
+            # Assert: chip exists for that header (skip empty header names gracefully)
+            chip_texts = flight_page.get_grouped_chip_texts()
+            if header_name:
+                assert header_name in chip_texts, f"[idx {idx}] Chip for '{header_name}' not found. Chips: {chip_texts}"
+            else:
+                # If header has no text (icon column), assert at least one chip exists
+                assert len(chip_texts) >= 1, f"[idx {idx}] No grouping chip found."
+            # Assert: auto-group column present at left and groups visible
+            assert flight_page.is_auto_group_column_present_left(), f"[idx {idx}] Auto group column not detected."
+            if not flight_page.has_group_rows():
+                flight_page.expand_first_group_if_collapsed()
+                time.sleep(0.3)
+            assert flight_page.has_group_rows(), f"[idx {idx}] No group rows visible."
+
     @allure.title("Verifying page views functionality")
     @pytest.mark.smoke
     def test_switch_from_default_view(self, driver, config):
@@ -217,6 +243,79 @@ class TestFlights:
         flight_page = dashboard.go_to_flight_page()
         is_report_name_available = flight_page.get_report_history_downloads()
         assert is_report_name_available, "report name not available"
+
+    @allure.title("Verifying data available in the table")
+    def test_validate_data_available_in_table(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        # Validate table has data
+        is_valid, result = flight_page.validate_table_has_data()
+        assert is_valid, f"Comprehensive table validation failed: {result}"
+        # If validation returns detailed results
+        if isinstance(result, dict):
+            assert result["non_empty_cells"] >= 5, f"Expected at least 5 data cells, found {result['non_empty_cells']}"
+            # Log detailed results
+            with allure.step("Table validation results"):
+                allure.attach(
+                    json.dumps(result, indent=2),
+                    "table_validation_details.json",
+                    allure.attachment_type.JSON
+                )
+
+    @allure.title("Verifying table_headers_deselecting_functionality")
+    @pytest.mark.smoke
+    def test_all_table_headers_deselecting_functionality(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        # Skip if no headings present
+        if not flight_page.has_table_headings():
+            pytest.skip("No table headings; nothing to toggle.")
+        # Open the column selector panel
+        flight_page.open_column_selector(toggle_index=0)
+        has_columns=flight_page.has_table_headings()
+        if has_columns:
+            is_no_column=flight_page.no_of_table_header_after_deselection()
+            assert is_no_column, "table heading are there after deselection"
+
+
+    @allure.title("Verifying table_headers_search_and_select_functionality")
+    @pytest.mark.smoke
+    def test_all_table_headers_search_and_select_functionality(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        # Skip if no headings present
+        if not flight_page.has_table_headings():
+            pytest.skip("No table headings; nothing to toggle.")
+        # Open the column selector panel
+        flight_page.open_column_selector(toggle_index=0)
+        is_selected=flight_page.enter_text_into_textbox_for_column_header_selection()
+        assert is_selected, "column search functionality failed"
+
+
+    @allure.title("Verifying table_headers_aggregate_functionality")
+    @pytest.mark.smoke
+    def test_all_table_headers_aggregate_functionality(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        # Skip if no headings present
+        if not flight_page.has_table_headings():
+            pytest.skip("No table headings; nothing to toggle.")
+        # Open the column selector panel
+        flight_page.open_column_selector(toggle_index=0)
+        flight_page.enter_text_into_textbox_for_column_header_selection()
+        flight_page.aggregate_function_to_column()
+
+
+
+
+
+
+
+
 
 
 
