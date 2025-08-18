@@ -2,6 +2,7 @@ import time
 
 from selenium.common import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, \
     TimeoutException, NoAlertPresentException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -12,6 +13,8 @@ class BrowserUtility:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
+        self.actions = ActionChains(self.driver)
+
 
     TABLE_HEADING_LABEL_LOCATOR=(By.XPATH,'//span[@ref="eText" and @class="ag-header-cell-text"]')
 
@@ -230,6 +233,10 @@ class BrowserUtility:
         for el in clear_elements:
             print(index)
             el.clear()
+
+    def get_visible_elements(self, locator):
+        elements = self.wait_for_all_elements(locator)
+        return [el for el in elements if el.is_displayed()]
 
 
 

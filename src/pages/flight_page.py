@@ -3,7 +3,7 @@ from operator import index
 from typing import List
 
 import time
-from selenium.common import NoSuchElementException
+from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver import Keys, ActionChains
 
 from selenium.webdriver.common.by import By
@@ -56,6 +56,22 @@ class FlightPage(BrowserUtility):
     FIRST_CHECKBOX_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-column-select')]//div[contains(@class,'ag-column-select-column')]//span[contains(@class,'ag-column-select-column-label')]")
     CONTEXT_MENU_FOR_GROUPING_LOCATOR=(By.XPATH,"(//div[contains(@class,'ag-menu') or contains(@role,'menu')]//span[contains(@class,'ag-menu-option-text')])[2]")
     FIRST_COLUMN_ROW_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-column-select')]//div[contains(@class,'ag-column-select-column')]")
+    INVOICE_VIEW_BUTTON_LOCATOR=(By.XPATH,"//div[@role='button' and normalize-space()='View Invoice']")
+    PDF_VIEW_INDICATOR_LOCATOR=(By.ID,"pdfEmbed")
+    THIRD_COLUMN_HEADER_LOCATOR=(By.XPATH, '(//span[@ref="eText" and @class="ag-header-cell-text"])[3]')
+    FIRST_COLUMN_HEADER_LOCATOR=(By.XPATH,'//span[@ref="eText" and @class="ag-header-cell-text"]')
+    FIRST_COLUMN_HAMBURGER_LOCATOR=(By.XPATH,"//div[contains(@class,'ag-header-cell')]//span[contains(@class,'ag-header-cell-text')]/ancestor::div[contains(@class,'ag-header-cell')]//span[contains(@class,'ag-header-icon') and contains(@class,'ag-header-cell-menu-button')]")
+    THIRD_COLUMN_HAMBURGER_LOCATOR=(By.XPATH, "(//div[contains(@class,'ag-header-cell')]//span[contains(@class,'ag-header-cell-text')]/ancestor::div[contains(@class,'ag-header-cell')]//span[contains(@class,'ag-header-icon') and contains(@class,'ag-header-cell-menu-button')])[3]")
+    HAMBURGER_MENU = (By.CSS_SELECTOR, ".ag-menu")
+    RESETS_COLUMN=(By.XPATH,"//span[contains(@class,'ag-menu-option-text')][normalize-space()='Reset Columns']")
+    PIN_COLUMN_MENU_ITEM = (By.XPATH, "//span[contains(@class,'ag-menu-option-text')][normalize-space()='Pin Column']")
+    PIN_LEFT_OPTION = (By.XPATH, "//span[contains(@class,'ag-menu-option-text')][normalize-space()='Pin Left']")
+    PIN_RIGHT_OPTION = (By.XPATH, "//span[contains(@class,'ag-menu-option-text')][normalize-space()='Pin Right']")
+    NO_PIN_OPTION = (By.XPATH, "//span[contains(@class,'ag-menu-option-text')][normalize-space()='No Pin']")
+    # Pinned column containers
+    LEFT_PINNED_CONTAINER = (By.CSS_SELECTOR, ".ag-pinned-left-cols-container")
+    RIGHT_PINNED_CONTAINER = (By.CSS_SELECTOR, ".ag-pinned-right-cols-container")
+    CENTER_CONTAINER = (By.CSS_SELECTOR, ".ag-center-cols-container")
     # Auto-group cues/classes can vary; we check any of these markers within first col cell
     AUTO_GROUP_MARKERS_XPATH = (
         "//*[contains(@class,'ag-group-expanded') or "
@@ -592,27 +608,88 @@ class FlightPage(BrowserUtility):
         self.click(self.CONTEXT_MENU_FOR_GROUPING_LOCATOR)
         time.sleep(10)
 
+    def view_invoice_pdf(self, max_steps=20, scroll_step=1200):
+        scroll_container = self.wait.until(EC.presence_of_element_located(self.BODY_SCROLL_LOCATOR))
+        self.driver.execute_script("arguments[0].scrollLeft = 0;", scroll_container)
+        last_scroll = -1
+        found = False
+
+        for step in range(max_steps):
+            buttons = self.driver.find_elements(*self.INVOICE_VIEW_BUTTON_LOCATOR)
+            if buttons:
+                button = buttons[0]
+                self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});", button)
+                WebDriverWait(self.driver, 3).until(EC.element_to_be_clickable(self.INVOICE_VIEW_BUTTON_LOCATOR))
+                button.click()
+                found = True
+                break
+
+            current_scroll = self.driver.execute_script("return arguments[0].scrollLeft;", scroll_container)
+            max_scroll = self.driver.execute_script("return arguments[0].scrollWidth - arguments[0].clientWidth;",
+                                                    scroll_container)
+            if current_scroll is None or max_scroll is None:
+                raise Exception("scroll_container is not a real scrollable element; check your BODY_SCROLL_LOCATOR")
+            print(f"Scrolling... current: {current_scroll}, max: {max_scroll}")
+
+            if current_scroll >= max_scroll or current_scroll == last_scroll:
+                break
+            self.driver.execute_script(f"arguments[0].scrollLeft += {scroll_step};", scroll_container)
+            last_scroll = current_scroll
+
+        if not found:
+            raise Exception("Could not find View Invoice button after scrolling")
+        # self.visible_element(self.PDF_VIEW_INDICATOR_LOCATOR)
+        pdf_embed = self.driver.find_element(*self.PDF_VIEW_INDICATOR_LOCATOR)
+        if pdf_embed.is_displayed():
+            return True
+        return False
+
+    def pin_column_to_left(self):
+        header=self.visible_element(self.THIRD_COLUMN_HEADER_LOCATOR)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(header).perform()
+        time.sleep(1)
+        self.click(self.THIRD_COLUMN_HAMBURGER_LOCATOR)
+        self.visible_element(self.HAMBURGER_MENU)
+        self.click(self.PIN_COLUMN_MENU_ITEM)
+        time.sleep(0.3)
+        self.click(self.PIN_LEFT_OPTION)
+        time.sleep(0.3)
+        elements_of_left_pins_columns=self.get_visible_elements(self.LEFT_PINNED_CONTAINER)
+        no__of_left_pins_columns=len(elements_of_left_pins_columns)
+        return no__of_left_pins_columns
+
+    def pin_column_to_right(self):
+        header=self.visible_element(self.THIRD_COLUMN_HEADER_LOCATOR)
+        self.actions.move_to_element(header).perform()
+        time.sleep(1)
+        self.click(self.THIRD_COLUMN_HAMBURGER_LOCATOR)
+        self.visible_element(self.HAMBURGER_MENU)
+        self.click(self.PIN_COLUMN_MENU_ITEM)
+        time.sleep(0.3)
+        self.click(self.PIN_RIGHT_OPTION)
+        time.sleep(0.3)
+        elements_of_right_pins_columns=self.get_visible_elements(self.RIGHT_PINNED_CONTAINER)
+        no__of_right_pins_columns=len(elements_of_right_pins_columns)
+        return no__of_right_pins_columns
+
+    def pin_column_to_remove(self):
+        header = self.visible_element(self.FIRST_COLUMN_HEADER_LOCATOR)
+        self.actions.move_to_element(header).perform()
+        time.sleep(1)
+        self.click(self.FIRST_COLUMN_HAMBURGER_LOCATOR)
+        self.visible_element(self.HAMBURGER_MENU)
+        self.click(self.PIN_COLUMN_MENU_ITEM)
+        time.sleep(0.3)
+        self.click(self.NO_PIN_OPTION)
+        time.sleep(0.3)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def pin_column_to_reset(self):
+        header=self.visible_element(self.THIRD_COLUMN_HEADER_LOCATOR)
+        self.actions.move_to_element(header).perform()
+        time.sleep(1)
+        self.click(self.THIRD_COLUMN_HAMBURGER_LOCATOR)
+        self.visible_element(self.HAMBURGER_MENU)
+        self.click(self.RESETS_COLUMN)
+        time.sleep(0.3)

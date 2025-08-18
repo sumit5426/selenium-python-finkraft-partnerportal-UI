@@ -309,6 +309,36 @@ class TestFlights:
         flight_page.enter_text_into_textbox_for_column_header_selection()
         flight_page.aggregate_function_to_column()
 
+    @allure.title("Verifying invoice view functionality")
+    @pytest.mark.smoke
+    def test_invoice_pdf_available_in_ui(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        is_invoice_visible=flight_page.view_invoice_pdf()
+        assert is_invoice_visible, "invoice pdf. did not appear"
+
+    @allure.title("Verifying table header pinned functionality")
+    @pytest.mark.smoke
+    def test_table_header_pinned_functionality(self, driver, config):
+        login_page = LoginPage(driver)
+        dashboard = login_page.login(config["username"], config["password"])
+        flight_page = dashboard.go_to_flight_page()
+        left_pin_count = flight_page.pin_column_to_left()
+        assert left_pin_count >= 1, "Pin to left failed: No column is pinned left"
+        # Pin to right & assert
+        right_pin_count = flight_page.pin_column_to_right()
+        assert right_pin_count >= 1, "Pin to right failed: No column is pinned right"
+        flight_page.pin_column_to_remove()
+        no_left_pins = len(flight_page.get_visible_elements(flight_page.LEFT_PINNED_CONTAINER))
+        assert no_left_pins == 0, "Remove pin failed: Columns are still pinned"
+        flight_page.pin_column_to_reset()
+        # Check and assert whatever post-reset behavior is expected (such as pin containers are empty)
+        assert len(flight_page.get_visible_elements(flight_page.LEFT_PINNED_CONTAINER)) == 0, "Reset left pins failed"
+        assert len(flight_page.get_visible_elements(flight_page.RIGHT_PINNED_CONTAINER)) == 0, "Reset right pins failed"
+
+
+
 
 
 
